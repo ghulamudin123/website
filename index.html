@@ -1,169 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="nUWQDitNhNyFV8ESCNHtladA426cAy_Bod6ds6DeJcM" />
+<meta name="google-site-verification" content="nUWQDitNhNyFVESCNHtladA426cAy_Bod6ds6DeJcM" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>B.S Insaf General Store</title>
-<meta name="description" content="B.S Insaf General Store - Groceries, cooking oil, ghee, tea, snacks, personal care, household and baby products.">
+
+<meta name="description" content="B.S Insaf General Store - Ration, groceries, cooking oil, ghee, tea, snacks, personal care and household products.">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:#123b31;background:#fff}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#123b31;
+background:#fff;
+}
+
 a{text-decoration:none;color:inherit}
 
 .top{
-background:#003f32;color:#fff;padding:10px 5%;
-display:flex;justify-content:space-between;gap:15px;
-flex-wrap:wrap;font-size:14px
+background:#003f32;
+color:#fff;
+padding:10px 5%;
+display:flex;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
+font-size:14px;
 }
 
 .header{
-padding:18px 5%;display:flex;align-items:center;
-justify-content:space-between;gap:25px;background:#fff
+padding:18px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+background:#fff;
 }
 
 .logo{
-font-size:32px;font-weight:900;letter-spacing:1px;color:#064c3b
+font-size:30px;
+font-weight:900;
+color:#064c3b;
 }
+
 .logo span{
-display:block;font-size:20px;color:#1f7b25;letter-spacing:2px
+display:block;
+font-size:19px;
+color:#1f7b25;
+letter-spacing:2px;
 }
 
-.search{display:flex;flex:1;max-width:520px}
+.search{
+display:flex;
+flex:1;
+max-width:500px;
+}
+
 .search input{
-width:100%;padding:14px;border:1px solid #ddd;
-border-radius:8px 0 0 8px;font-size:16px
-}
-.search button{
-border:0;background:#004b3c;color:#fff;
-padding:0 20px;border-radius:0 8px 8px 0;font-size:20px
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px 0 0 8px;
+font-size:16px;
 }
 
-.wa{font-weight:bold;color:#07583f;white-space:nowrap}
+.search button{
+border:0;
+background:#004b3c;
+color:#fff;
+padding:0 20px;
+border-radius:0 8px 8px 0;
+font-size:20px;
+}
+
+.wa{
+font-weight:bold;
+color:#07583f;
+white-space:nowrap;
+}
 
 .nav{
-background:#003f32;color:#fff;display:flex;
-justify-content:center;gap:6px;flex-wrap:wrap;padding:8px 4%
+background:#003f32;
+color:#fff;
+display:flex;
+justify-content:center;
+gap:6px;
+flex-wrap:wrap;
+padding:8px 4%;
 }
+
 .nav a{
-padding:13px 18px;border-radius:8px;font-weight:bold;cursor:pointer
+padding:13px 17px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
 }
-.nav a:hover,.nav a.active{background:#4fae18}
+
+.nav a:hover,
+.nav a.active{
+background:#4fae18;
+}
 
 .hero{
-min-height:390px;
-background:linear-gradient(90deg,rgba(0,64,47,.96),rgba(0,64,47,.55)),
+min-height:400px;
+background:
+linear-gradient(90deg,rgba(0,64,47,.96),rgba(0,64,47,.55)),
 url("https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1600&q=80")
 center/cover;
-display:flex;align-items:center;padding:45px 7%;color:white
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+padding:45px 7%;
+color:white;
 }
 
-.hero h1{font-size:58px;line-height:1;color:#fff}
-.hero h1 span{color:#f6c928}
-.hero p{font-size:22px;margin:18px 0 25px;max-width:600px}
+.hero h1{
+font-size:55px;
+line-height:1;
+}
+
+.hero h1 span{
+color:#f6c928;
+}
+
+.hero p{
+font-size:21px;
+margin:18px 0 25px;
+max-width:650px;
+}
 
 .btn{
-display:inline-block;background:#59b51a;color:white;
-padding:14px 25px;border-radius:8px;font-weight:bold
+display:inline-block;
+background:#59b51a;
+color:white;
+padding:14px 25px;
+border-radius:8px;
+font-weight:bold;
 }
 
 .ramzan{
-margin-left:auto;text-align:center;background:rgba(0,54,38,.82);
-padding:30px;border-radius:20px;border:1px solid #d8b63a;max-width:320px
+text-align:center;
+background:rgba(0,54,38,.85);
+padding:30px;
+border-radius:20px;
+border:1px solid #d8b63a;
+max-width:320px;
 }
-.ramzan h2{color:#ffd34a;font-size:32px}
 
-section{padding:45px 5%}
+.ramzan h2{
+color:#ffd34a;
+font-size:30px;
+}
+
+section{
+padding:45px 5%;
+}
 
 .title{
-display:flex;justify-content:space-between;
-align-items:center;margin-bottom:25px
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
 }
-.title h2{font-size:30px}
+
+.title h2{
+font-size:30px;
+}
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:18px
+gap:18px;
 }
 
 .card{
-background:#fff;border:1px solid #e5e5e5;border-radius:12px;
-overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.08);
-text-align:center;padding-bottom:18px
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+text-align:center;
+padding-bottom:18px;
 }
 
 .category-card{
 cursor:pointer;
 transition:.2s;
 }
+
 .category-card:hover{
 transform:translateY(-5px);
-box-shadow:0 7px 18px rgba(0,0,0,.15)
+box-shadow:0 7px 18px rgba(0,0,0,.15);
 }
 
 .card .pic{
-height:145px;background:#f5f7f6;
-display:flex;align-items:center;justify-content:center;
-font-size:62px
+height:135px;
+background:#f5f7f6;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
 }
 
-.card h3{margin:14px 8px 5px}
-.card p{color:#666}
+.card h3{
+margin:13px 8px 5px;
+}
 
-.products{background:#f5f8f6}
+.card p{
+color:#666;
+}
+
+.products{
+background:#f5f8f6;
+}
 
 .product{
-padding:18px;text-align:left
+padding:0 0 18px;
+text-align:center;
 }
-.product .pic{height:160px;font-size:72px}
+
+.product .pic{
+height:150px;
+font-size:70px;
+}
 
 .price{
-font-size:20px;font-weight:bold;
-color:#16801d;margin:10px 0
+font-size:20px;
+font-weight:bold;
+color:#16801d;
+margin:10px 0;
+}
+
+.quantity{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin:10px;
+}
+
+.quantity button{
+width:34px;
+height:34px;
+border:0;
+border-radius:6px;
+background:#003f32;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+}
+
+.quantity span{
+min-width:30px;
+font-weight:bold;
+font-size:18px;
 }
 
 .order{
-border:0;background:#16801d;color:#fff;
-padding:10px 15px;border-radius:7px;
-cursor:pointer;font-weight:bold
+border:0;
+background:#16801d;
+color:#fff;
+padding:10px 15px;
+border-radius:7px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cart{
+background:#fff;
+border:2px solid #16801d;
+border-radius:12px;
+padding:20px;
+margin-bottom:30px;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.cart h2{
+margin-bottom:15px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+border-bottom:1px solid #ddd;
+padding:10px 0;
+}
+
+.cart-item button{
+border:0;
+background:#d62828;
+color:#fff;
+padding:6px 10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.total{
+font-size:23px;
+font-weight:bold;
+color:#16801d;
+margin:18px 0;
+}
+
+.whatsapp-order{
+border:0;
+background:#25D366;
+color:#fff;
+padding:13px 20px;
+border-radius:8px;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+.clear{
+border:0;
+background:#777;
+color:#fff;
+padding:12px 18px;
+border-radius:8px;
+margin-left:8px;
+cursor:pointer;
 }
 
 .back{
 display:none;
-border:0;background:#003f32;color:#fff;
-padding:11px 18px;border-radius:7px;
-font-weight:bold;cursor:pointer;
-margin-bottom:20px
+border:0;
+background:#003f32;
+color:#fff;
+padding:11px 18px;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:20px;
 }
 
 .contact{
-background:#004b3c;color:#fff;text-align:center
+background:#004b3c;
+color:#fff;
+text-align:center;
 }
-.contact h2{font-size:32px;margin-bottom:12px}
+
+.contact h2{
+font-size:32px;
+margin-bottom:12px;
+}
 
 .footer{
-background:#002e26;color:#fff;padding:35px 5%;
-display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px
+background:#002e26;
+color:#fff;
+padding:35px 5%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
-.footer h3{margin-bottom:14px;color:#8be02b}
-.footer p,.footer li{margin:8px 0;color:#d9eee8}
+
+.footer h3{
+margin-bottom:14px;
+color:#8be02b;
+}
+
+.footer p{
+margin:8px 0;
+color:#d9eee8;
+}
 
 .copy{
-text-align:center;background:#00251f;
-color:#ccc;padding:14px;font-size:14px
+text-align:center;
+background:#00251f;
+color:#ccc;
+padding:14px;
+font-size:14px;
 }
 
 @media(max-width:750px){
-.header{flex-direction:column}
-.hero h1{font-size:40px}
-.ramzan{margin:30px 0 0}
-.hero{flex-direction:column;align-items:flex-start}
-.top{justify-content:center}
-.nav a{padding:10px 12px;font-size:14px}
+
+.header{
+flex-direction:column;
+}
+
+.search{
+width:100%;
+}
+
+.hero{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.ramzan{
+margin:20px auto 0;
+}
+
+.top{
+justify-content:center;
+text-align:center;
+}
+
+.nav a{
+padding:10px 11px;
+font-size:13px;
+}
+
+.cart-item{
+font-size:14px;
+}
+
 }
 </style>
 </head>
@@ -172,8 +424,8 @@ color:#ccc;padding:14px;font-size:14px
 
 <div class="top">
 <div>📍 Your City, Pakistan</div>
-<div>🚚 Quality Products | Best Prices | Your Satisfaction</div>
-<div>📞 03111263960 | 🟢 WhatsApp</div>
+<div>🚚 Quality Products | Best Prices</div>
+<div>📞 03111263960 | WhatsApp</div>
 </div>
 
 <header class="header">
@@ -184,7 +436,10 @@ color:#ccc;padding:14px;font-size:14px
 </div>
 
 <div class="search">
-<input id="search" placeholder="Search for products..." oninput="searchProducts()">
+<input
+id="search"
+placeholder="Search ration/product..."
+oninput="searchProducts()">
 <button>🔍</button>
 </div>
 
@@ -203,9 +458,12 @@ Order on WhatsApp<br>
 
 <a href="#products" onclick="showAllProducts()">▦ All Products</a>
 
-<a href="#contact">📞 Contact Us</a>
+<a href="#cart">🧾 My Bill</a>
+
+<a href="#contact">📞 Contact</a>
 
 </nav>
+
 
 <main id="home">
 
@@ -220,7 +478,7 @@ B.S INSAF<br>
 
 <p>
 Har Ghar Ki Zaroorat, Ek Hi Dukaan Par —
-daily essentials, groceries and household products at great prices.
+Ration, groceries aur daily-use products.
 </p>
 
 <a class="btn"
@@ -245,7 +503,7 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 <section id="categories">
 
 <div class="title">
-<h2>Shop by Category</h2>
+<h2>🛒 Shop by Category</h2>
 </div>
 
 <div class="grid">
@@ -253,13 +511,13 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 <div class="card category-card" onclick="showCategory('Groceries')">
 <div class="pic">🌾</div>
 <h3>Groceries</h3>
-<p>Rice, pulses & flour</p>
+<p>Rice, pulses, flour & sugar</p>
 </div>
 
 <div class="card category-card" onclick="showCategory('Oil')">
 <div class="pic">🫗</div>
-<h3>Cooking Oil & Ghee</h3>
-<p>Quality everyday oils</p>
+<h3>Oil & Ghee</h3>
+<p>Cooking oil & ghee</p>
 </div>
 
 <div class="card category-card" onclick="showCategory('Tea')">
@@ -270,19 +528,19 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 
 <div class="card category-card" onclick="showCategory('Snacks')">
 <div class="pic">🍪</div>
-<h3>Snacks & Biscuits</h3>
+<h3>Snacks</h3>
 <p>Biscuits & snacks</p>
 </div>
 
 <div class="card category-card" onclick="showCategory('Personal')">
 <div class="pic">🧴</div>
 <h3>Personal Care</h3>
-<p>Daily care products</p>
+<p>Soap, shampoo & care</p>
 </div>
 
 <div class="card category-card" onclick="showCategory('Household')">
 <div class="pic">🧹</div>
-<h3>Household Items</h3>
+<h3>Household</h3>
 <p>Cleaning & home needs</p>
 </div>
 
@@ -295,7 +553,7 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 <div class="card category-card" onclick="showCategory('More')">
 <div class="pic">🛍️</div>
 <h3>More Items</h3>
-<p>Many more daily needs</p>
+<p>Daily-use products</p>
 </div>
 
 </div>
@@ -312,177 +570,337 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 ← Back to All Products
 </button>
 
-<div class="grid" id="productGrid">
+<div id="productGrid" class="grid">
 
 
 <!-- ================= GROCERIES ================= -->
 
-<div class="card product" data-category="Groceries" data-name="Basmati Rice">
+<div class="card product" data-category="Groceries" data-name="Basmati Rice" data-price="350">
 <div class="pic">🍚</div>
 <h3>Basmati Rice</h3>
 <div class="price">Rs. 350 / kg</div>
-<button class="order" onclick="order('Basmati Rice')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Groceries" data-name="Sella Rice">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Groceries" data-name="Sella Rice" data-price="320">
 <div class="pic">🍚</div>
 <h3>Sella Rice</h3>
 <div class="price">Rs. 320 / kg</div>
-<button class="order" onclick="order('Sella Rice')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Groceries" data-name="Atta">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Groceries" data-name="Atta" data-price="150">
 <div class="pic">🌾</div>
 <h3>Atta</h3>
 <div class="price">Rs. 150 / kg</div>
-<button class="order" onclick="order('Atta')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Groceries" data-name="Sugar">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Groceries" data-name="Sugar" data-price="180">
 <div class="pic">🍚</div>
 <h3>Sugar</h3>
 <div class="price">Rs. 180 / kg</div>
-<button class="order" onclick="order('Sugar')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Groceries" data-name="Daal Chana">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Groceries" data-name="Daal Chana" data-price="280">
 <div class="pic">🫘</div>
 <h3>Daal Chana</h3>
 <div class="price">Rs. 280 / kg</div>
-<button class="order" onclick="order('Daal Chana')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Groceries" data-name="Daal Masoor">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Groceries" data-name="Daal Masoor" data-price="300">
 <div class="pic">🫘</div>
 <h3>Daal Masoor</h3>
 <div class="price">Rs. 300 / kg</div>
-<button class="order" onclick="order('Daal Masoor')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= OIL & GHEE ================= -->
 
-<div class="card product" data-category="Oil" data-name="Cooking Oil">
+<div class="card product" data-category="Oil" data-name="Cooking Oil" data-price="550">
 <div class="pic">🫗</div>
 <h3>Cooking Oil</h3>
 <div class="price">Rs. 550 / litre</div>
-<button class="order" onclick="order('Cooking Oil')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Oil" data-name="Banaspati Ghee">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Oil" data-name="Banaspati Ghee" data-price="600">
 <div class="pic">🧈</div>
 <h3>Banaspati Ghee</h3>
 <div class="price">Rs. 600 / kg</div>
-<button class="order" onclick="order('Banaspati Ghee')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Oil" data-name="Canola Oil">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Oil" data-name="Canola Oil" data-price="650">
 <div class="pic">🫗</div>
 <h3>Canola Oil</h3>
 <div class="price">Rs. 650 / litre</div>
-<button class="order" onclick="order('Canola Oil')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= TEA ================= -->
 
-<div class="card product" data-category="Tea" data-name="Tea">
+<div class="card product" data-category="Tea" data-name="Tea" data-price="450">
 <div class="pic">☕</div>
 <h3>Tea</h3>
 <div class="price">Rs. 450 / pack</div>
-<button class="order" onclick="order('Tea')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Tea" data-name="Coffee">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Tea" data-name="Coffee" data-price="500">
 <div class="pic">☕</div>
 <h3>Coffee</h3>
 <div class="price">Rs. 500 / pack</div>
-<button class="order" onclick="order('Coffee')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= SNACKS ================= -->
 
-<div class="card product" data-category="Snacks" data-name="Biscuits">
+<div class="card product" data-category="Snacks" data-name="Biscuits" data-price="50">
 <div class="pic">🍪</div>
 <h3>Biscuits</h3>
 <div class="price">Rs. 50 / pack</div>
-<button class="order" onclick="order('Biscuits')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Snacks" data-name="Chips">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Snacks" data-name="Chips" data-price="50">
 <div class="pic">🥔</div>
 <h3>Chips</h3>
 <div class="price">Rs. 50 / pack</div>
-<button class="order" onclick="order('Chips')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
-<!-- ================= PERSONAL CARE ================= -->
+<!-- ================= PERSONAL ================= -->
 
-<div class="card product" data-category="Personal" data-name="Shampoo">
+<div class="card product" data-category="Personal" data-name="Shampoo" data-price="250">
 <div class="pic">🧴</div>
 <h3>Shampoo</h3>
 <div class="price">Rs. 250 / bottle</div>
-<button class="order" onclick="order('Shampoo')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Personal" data-name="Soap">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Personal" data-name="Soap" data-price="120">
 <div class="pic">🧼</div>
 <h3>Soap</h3>
 <div class="price">Rs. 120 / piece</div>
-<button class="order" onclick="order('Soap')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= HOUSEHOLD ================= -->
 
-<div class="card product" data-category="Household" data-name="Laundry Powder">
+<div class="card product" data-category="Household" data-name="Laundry Powder" data-price="300">
 <div class="pic">🧼</div>
 <h3>Laundry Powder</h3>
 <div class="price">Rs. 300 / pack</div>
-<button class="order" onclick="order('Laundry Powder')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Household" data-name="Dish Wash">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Household" data-name="Dish Wash" data-price="200">
 <div class="pic">🧽</div>
 <h3>Dish Wash</h3>
 <div class="price">Rs. 200 / bottle</div>
-<button class="order" onclick="order('Dish Wash')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= BABY ================= -->
 
-<div class="card product" data-category="Baby" data-name="Baby Diapers">
+<div class="card product" data-category="Baby" data-name="Baby Diapers" data-price="800">
 <div class="pic">👶</div>
 <h3>Baby Diapers</h3>
 <div class="price">Rs. 800 / pack</div>
-<button class="order" onclick="order('Baby Diapers')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="Baby" data-name="Baby Soap">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="Baby" data-name="Baby Soap" data-price="180">
 <div class="pic">🧼</div>
 <h3>Baby Soap</h3>
 <div class="price">Rs. 180 / piece</div>
-<button class="order" onclick="order('Baby Soap')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
 <!-- ================= MORE ================= -->
 
-<div class="card product" data-category="More" data-name="Salt">
+<div class="card product" data-category="More" data-name="Salt" data-price="60">
 <div class="pic">🧂</div>
 <h3>Salt</h3>
 <div class="price">Rs. 60 / pack</div>
-<button class="order" onclick="order('Salt')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
 </div>
 
-<div class="card product" data-category="More" data-name="Match Box">
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
+</div>
+
+
+<div class="card product" data-category="More" data-name="Match Box" data-price="20">
 <div class="pic">🔥</div>
 <h3>Match Box</h3>
 <div class="price">Rs. 20 / box</div>
-<button class="order" onclick="order('Match Box')">Order</button>
+
+<div class="quantity">
+<button onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 </div>
 
 
@@ -490,9 +908,39 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 </section>
 
 
+<!-- ================= BILL ================= -->
+
+<section id="cart">
+
+<div class="cart">
+
+<h2>🧾 My Bill / Cart</h2>
+
+<div id="cartItems">
+<p>No products added yet.</p>
+</div>
+
+<div class="total">
+Total: Rs. <span id="cartTotal">0</span>
+</div>
+
+<button class="whatsapp-order" onclick="sendOrder()">
+💬 Send Bill on WhatsApp
+</button>
+
+<button class="clear" onclick="clearCart()">
+Clear Bill
+</button>
+
+</div>
+
+</section>
+
+
 <section id="contact" class="contact">
 
 <h2>Order From Home</h2>
+
 <p>Easy • Safe • Reliable</p>
 
 <br>
@@ -512,7 +960,10 @@ target="_blank">
 
 <div>
 <h3>B.S INSAF GENERAL STORE</h3>
-<p>We provide daily essentials and high-quality products at the best prices.</p>
+<p>
+Daily ration, groceries and household products
+at reasonable prices.
+</p>
 </div>
 
 <div>
@@ -520,7 +971,8 @@ target="_blank">
 <p><a href="#home">Home</a></p>
 <p><a href="#products" onclick="showAllProducts()">All Products</a></p>
 <p><a href="#categories">Categories</a></p>
-<p><a href="#contact">Contact Us</a></p>
+<p><a href="#cart">My Bill</a></p>
+<p><a href="#contact">Contact</a></p>
 </div>
 
 <div>
@@ -537,6 +989,7 @@ target="_blank">
 
 </footer>
 
+
 <div class="copy">
 © 2026 B.S Insaf General Store. All Rights Reserved.
 </div>
@@ -544,105 +997,132 @@ target="_blank">
 
 <script>
 
-function order(product){
+let cart=[];
 
-const msg =
-"Assalam o Alaikum, mujhe " +
-product +
-" order karna hai.";
 
-window.open(
-"https://wa.me/923111263960?text=" +
-encodeURIComponent(msg),
-"_blank"
+function changeQty(button,change){
+
+let span=button.parentElement.querySelector("span");
+
+let qty=parseInt(span.innerText)+change;
+
+if(qty<0){
+qty=0;
+}
+
+span.innerText=qty;
+
+}
+
+
+function addToCart(button){
+
+let card=button.closest(".product");
+
+let name=card.dataset.name;
+
+let price=parseInt(card.dataset.price);
+
+let qty=parseInt(
+card.querySelector(".quantity span").innerText
 );
 
+if(qty<=0){
+
+alert("Please select quantity first.");
+
+return;
+
 }
 
+let existing=cart.find(function(item){
+return item.name===name;
+});
 
-function showCategory(category){
+if(existing){
 
-document.getElementById("products").scrollIntoView({
+existing.qty+=qty;
+
+}else{
+
+cart.push({
+name:name,
+price:price,
+qty:qty
+});
+
+}
+
+card.querySelector(".quantity span").innerText="0";
+
+updateCart();
+
+document.getElementById("cart").scrollIntoView({
 behavior:"smooth"
 });
 
-document.getElementById("productTitle").innerText =
-categoryName(category);
-
-document.getElementById("backButton").style.display =
-"inline-block";
-
-document.querySelectorAll(".product").forEach(function(product){
-
-if(product.dataset.category === category){
-product.style.display = "block";
-}else{
-product.style.display = "none";
 }
+
+
+function updateCart(){
+
+let box=document.getElementById("cartItems");
+
+let total=0;
+
+if(cart.length===0){
+
+box.innerHTML="<p>No products added yet.</p>";
+
+document.getElementById("cartTotal").innerText="0";
+
+return;
+
+}
+
+box.innerHTML="";
+
+cart.forEach(function(item,index){
+
+let amount=item.price*item.qty;
+
+total+=amount;
+
+let div=document.createElement("div");
+
+div.className="cart-item";
+
+div.innerHTML=
+"<div><strong>"+item.name+"</strong><br>"+
+"Rs. "+item.price+" × "+item.qty+
+" = Rs. "+amount+"</div>"+
+"<button onclick='removeItem("+index+")'>Remove</button>";
+
+box.appendChild(div);
 
 });
 
-}
-
-
-function categoryName(category){
-
-if(category === "Groceries") return "🌾 Groceries";
-if(category === "Oil") return "🫗 Cooking Oil & Ghee";
-if(category === "Tea") return "☕ Tea & Coffee";
-if(category === "Snacks") return "🍪 Snacks & Biscuits";
-if(category === "Personal") return "🧴 Personal Care";
-if(category === "Household") return "🧹 Household Items";
-if(category === "Baby") return "👶 Baby Care";
-if(category === "More") return "🛍️ More Items";
-
-return "Products";
+document.getElementById("cartTotal").innerText=total;
 
 }
 
 
-function showAllProducts(){
+function removeItem(index){
 
-document.getElementById("productTitle").innerText =
-"Popular Products";
+cart.splice(index,1);
 
-document.getElementById("backButton").style.display =
-"none";
-
-document.querySelectorAll(".product").forEach(function(product){
-product.style.display = "block";
-});
+updateCart();
 
 }
 
 
-function searchProducts(){
+function clearCart(){
 
-const q =
-document.getElementById("search")
-.value
-.toLowerCase();
+cart=[];
 
-document.getElementById("products").scrollIntoView({
-behavior:"smooth"
-});
-
-document.querySelectorAll(".product").forEach(function(product){
-
-const name =
-product.dataset.name.toLowerCase();
-
-if(name.includes(q)){
-product.style.display = "block";
-}else{
-product.style.display = "none";
-}
-
-});
+updateCart();
 
 }
 
-</script>
 
-</body>
-</html>
+f
