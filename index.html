@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta name="google-site-verification" content="nUWQDitNhNyFVESCNHtladA426cAy_Bod6ds6DeJcM" />
+
+<meta name="google-site-verification" content="nUWQDitNhNyFV8ESCNHtladA426cAy_Bod6ds6DeJcM" />
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +13,12 @@
 <meta name="description" content="B.S Insaf General Store - Ration, groceries, cooking oil, ghee, tea, snacks, personal care and household products.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
@@ -18,7 +26,10 @@ color:#123b31;
 background:#fff;
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit;
+}
 
 .top{
 background:#003f32;
@@ -65,6 +76,7 @@ padding:14px;
 border:1px solid #ddd;
 border-radius:8px 0 0 8px;
 font-size:16px;
+outline:none;
 }
 
 .search button{
@@ -106,10 +118,12 @@ background:#4fae18;
 
 .hero{
 min-height:400px;
+
 background:
 linear-gradient(90deg,rgba(0,64,47,.96),rgba(0,64,47,.55)),
 url("https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1600&q=80")
 center/cover;
+
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -244,20 +258,25 @@ margin:10px;
 }
 
 .quantity button{
-width:34px;
-height:34px;
+width:38px;
+height:38px;
 border:0;
-border-radius:6px;
+border-radius:7px;
 background:#003f32;
 color:#fff;
-font-size:20px;
+font-size:23px;
 cursor:pointer;
+font-weight:bold;
+}
+
+.quantity button:active{
+transform:scale(.90);
 }
 
 .quantity span{
-min-width:30px;
+min-width:35px;
 font-weight:bold;
-font-size:18px;
+font-size:20px;
 }
 
 .order{
@@ -268,6 +287,10 @@ padding:10px 15px;
 border-radius:7px;
 cursor:pointer;
 font-weight:bold;
+}
+
+.order:active{
+transform:scale(.96);
 }
 
 .cart{
@@ -417,519 +440,1141 @@ font-size:14px;
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
 
+
+<!-- TOP BAR -->
+
 <div class="top">
+
 <div>📍 Your City, Pakistan</div>
+
 <div>🚚 Quality Products | Best Prices</div>
+
 <div>📞 03111263960 | WhatsApp</div>
+
 </div>
+
+
+<!-- HEADER -->
 
 <header class="header">
 
 <div class="logo">
+
 🛒 B.S INSAF
+
 <span>GENERAL STORE</span>
+
 </div>
 
+
 <div class="search">
+
 <input
 id="search"
 placeholder="Search ration/product..."
 oninput="searchProducts()">
-<button>🔍</button>
+
+<button type="button">🔍</button>
+
 </div>
 
+
 <div class="wa">
+
 Order on WhatsApp<br>
+
 <strong>03111263960</strong>
+
 </div>
 
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav class="nav">
 
-<a class="active" href="#home">🏠 Home</a>
+<a class="active" href="#home">
+🏠 Home
+</a>
 
-<a href="#categories">🛒 Categories</a>
+<a href="#categories">
+🛒 Categories
+</a>
 
-<a href="#products" onclick="showAllProducts()">▦ All Products</a>
+<a href="#products" onclick="showAllProducts()">
+▦ All Products
+</a>
 
-<a href="#cart">🧾 My Bill</a>
+<a href="#cart">
+🧾 My Bill
+</a>
 
-<a href="#contact">📞 Contact</a>
+<a href="#contact">
+📞 Contact
+</a>
 
 </nav>
 
 
 <main id="home">
 
+
+<!-- HERO -->
+
 <section class="hero">
 
 <div>
 
 <h1>
+
 B.S INSAF<br>
+
 <span>GENERAL STORE</span>
+
 </h1>
 
+
 <p>
+
 Har Ghar Ki Zaroorat, Ek Hi Dukaan Par —
 Ration, groceries aur daily-use products.
+
 </p>
 
-<a class="btn"
+
+<a
+class="btn"
 href="https://wa.me/923111263960?text=Assalam%20o%20Alaikum%2C%20mujhe%20B.S%20Insaf%20General%20Store%20se%20order%20karna%20hai."
 target="_blank">
+
 Order on WhatsApp
+
 </a>
 
 </div>
 
+
 <div class="ramzan">
-<div style="font-size:55px">🌙</div>
-<h2>Ramzan Mubarak</h2>
+
+<div style="font-size:55px">
+🌙
+</div>
+
+<h2>
+Ramzan Mubarak
+</h2>
+
 <p style="margin-top:12px">
+
 May this blessed month bring peace, happiness and prosperity to you and your family.
+
 </p>
+
 </div>
 
 </section>
 
+
+<!-- CATEGORIES -->
 
 <section id="categories">
 
 <div class="title">
-<h2>🛒 Shop by Category</h2>
+
+<h2>
+🛒 Shop by Category
+</h2>
+
 </div>
+
 
 <div class="grid">
 
-<div class="card category-card" onclick="showCategory('Groceries')">
-<div class="pic">🌾</div>
-<h3>Groceries</h3>
-<p>Rice, pulses, flour & sugar</p>
+
+<div class="card category-card"
+onclick="showCategory('Groceries')">
+
+<div class="pic">
+🌾
 </div>
 
-<div class="card category-card" onclick="showCategory('Oil')">
-<div class="pic">🫗</div>
-<h3>Oil & Ghee</h3>
-<p>Cooking oil & ghee</p>
-</div>
+<h3>
+Groceries
+</h3>
 
-<div class="card category-card" onclick="showCategory('Tea')">
-<div class="pic">☕</div>
-<h3>Tea & Coffee</h3>
-<p>Tea, coffee & drinks</p>
-</div>
-
-<div class="card category-card" onclick="showCategory('Snacks')">
-<div class="pic">🍪</div>
-<h3>Snacks</h3>
-<p>Biscuits & snacks</p>
-</div>
-
-<div class="card category-card" onclick="showCategory('Personal')">
-<div class="pic">🧴</div>
-<h3>Personal Care</h3>
-<p>Soap, shampoo & care</p>
-</div>
-
-<div class="card category-card" onclick="showCategory('Household')">
-<div class="pic">🧹</div>
-<h3>Household</h3>
-<p>Cleaning & home needs</p>
-</div>
-
-<div class="card category-card" onclick="showCategory('Baby')">
-<div class="pic">👶</div>
-<h3>Baby Care</h3>
-<p>Baby essentials</p>
-</div>
-
-<div class="card category-card" onclick="showCategory('More')">
-<div class="pic">🛍️</div>
-<h3>More Items</h3>
-<p>Daily-use products</p>
-</div>
+<p>
+Rice, pulses, flour & sugar
+</p>
 
 </div>
+
+
+<div class="card category-card"
+onclick="showCategory('Oil')">
+
+<div class="pic">
+🫗
+</div>
+
+<h3>
+Oil & Ghee
+</h3>
+
+<p>
+Cooking oil & ghee
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('Tea')">
+
+<div class="pic">
+☕
+</div>
+
+<h3>
+Tea & Coffee
+</h3>
+
+<p>
+Tea, coffee & drinks
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('Snacks')">
+
+<div class="pic">
+🍪
+</div>
+
+<h3>
+Snacks
+</h3>
+
+<p>
+Biscuits & snacks
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('Personal')">
+
+<div class="pic">
+🧴
+</div>
+
+<h3>
+Personal Care
+</h3>
+
+<p>
+Soap, shampoo & care
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('Household')">
+
+<div class="pic">
+🧹
+</div>
+
+<h3>
+Household
+</h3>
+
+<p>
+Cleaning & home needs
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('Baby')">
+
+<div class="pic">
+👶
+</div>
+
+<h3>
+Baby Care
+</h3>
+
+<p>
+Baby essentials
+</p>
+
+</div>
+
+
+<div class="card category-card"
+onclick="showCategory('More')">
+
+<div class="pic">
+🛍️
+</div>
+
+<h3>
+More Items
+</h3>
+
+<p>
+Daily-use products
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
+
+<!-- PRODUCTS -->
 
 <section id="products" class="products">
 
 <div class="title">
-<h2 id="productTitle">Popular Products</h2>
+
+<h2 id="productTitle">
+Popular Products
+</h2>
+
 </div>
 
-<button class="back" id="backButton" onclick="showAllProducts()">
+
+<button
+class="back"
+id="backButton"
+onclick="showAllProducts()">
+
 ← Back to All Products
+
 </button>
+
 
 <div id="productGrid" class="grid">
 
 
-<!-- ================= GROCERIES ================= -->
+<!-- GROCERIES -->
 
-<div class="card product" data-category="Groceries" data-name="Basmati Rice" data-price="350">
-<div class="pic">🍚</div>
-<h3>Basmati Rice</h3>
-<div class="price">Rs. 350 / kg</div>
+
+<div class="card product"
+data-category="Groceries"
+data-name="Basmati Rice"
+data-price="350">
+
+<div class="pic">
+🍚
+</div>
+
+<h3>
+Basmati Rice
+</h3>
+
+<div class="price">
+Rs. 350 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
-<span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">
+−
+</button>
+
+<span>
+0
+</span>
+
+<button type="button"
+onclick="changeQty(this,1)">
++
+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button
+class="order"
+type="button"
+onclick="addToCart(this)">
+
+Add to Bill
+
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Groceries" data-name="Sella Rice" data-price="320">
+<div class="card product"
+data-category="Groceries"
+data-name="Sella Rice"
+data-price="320">
+
 <div class="pic">🍚</div>
+
 <h3>Sella Rice</h3>
-<div class="price">Rs. 320 / kg</div>
+
+<div class="price">
+Rs. 320 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Groceries" data-name="Atta" data-price="150">
+<div class="card product"
+data-category="Groceries"
+data-name="Atta"
+data-price="150">
+
 <div class="pic">🌾</div>
+
 <h3>Atta</h3>
-<div class="price">Rs. 150 / kg</div>
+
+<div class="price">
+Rs. 150 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Groceries" data-name="Sugar" data-price="180">
+<div class="card product"
+data-category="Groceries"
+data-name="Sugar"
+data-price="180">
+
 <div class="pic">🍚</div>
+
 <h3>Sugar</h3>
-<div class="price">Rs. 180 / kg</div>
+
+<div class="price">
+Rs. 180 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Groceries" data-name="Daal Chana" data-price="280">
+<div class="card product"
+data-category="Groceries"
+data-name="Daal Chana"
+data-price="280">
+
 <div class="pic">🫘</div>
+
 <h3>Daal Chana</h3>
-<div class="price">Rs. 280 / kg</div>
+
+<div class="price">
+Rs. 280 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Groceries" data-name="Daal Masoor" data-price="300">
+<div class="card product"
+data-category="Groceries"
+data-name="Daal Masoor"
+data-price="300">
+
 <div class="pic">🫘</div>
+
 <h3>Daal Masoor</h3>
-<div class="price">Rs. 300 / kg</div>
+
+<div class="price">
+Rs. 300 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= OIL & GHEE ================= -->
+<!-- OIL -->
 
-<div class="card product" data-category="Oil" data-name="Cooking Oil" data-price="550">
+
+<div class="card product"
+data-category="Oil"
+data-name="Cooking Oil"
+data-price="550">
+
 <div class="pic">🫗</div>
+
 <h3>Cooking Oil</h3>
-<div class="price">Rs. 550 / litre</div>
+
+<div class="price">
+Rs. 550 / litre
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Oil" data-name="Banaspati Ghee" data-price="600">
+<div class="card product"
+data-category="Oil"
+data-name="Banaspati Ghee"
+data-price="600">
+
 <div class="pic">🧈</div>
+
 <h3>Banaspati Ghee</h3>
-<div class="price">Rs. 600 / kg</div>
+
+<div class="price">
+Rs. 600 / kg
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Oil" data-name="Canola Oil" data-price="650">
+<div class="card product"
+data-category="Oil"
+data-name="Canola Oil"
+data-price="650">
+
 <div class="pic">🫗</div>
+
 <h3>Canola Oil</h3>
-<div class="price">Rs. 650 / litre</div>
+
+<div class="price">
+Rs. 650 / litre
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= TEA ================= -->
+<!-- TEA -->
 
-<div class="card product" data-category="Tea" data-name="Tea" data-price="450">
+
+<div class="card product"
+data-category="Tea"
+data-name="Tea"
+data-price="450">
+
 <div class="pic">☕</div>
+
 <h3>Tea</h3>
-<div class="price">Rs. 450 / pack</div>
+
+<div class="price">
+Rs. 450 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Tea" data-name="Coffee" data-price="500">
+<div class="card product"
+data-category="Tea"
+data-name="Coffee"
+data-price="500">
+
 <div class="pic">☕</div>
+
 <h3>Coffee</h3>
-<div class="price">Rs. 500 / pack</div>
+
+<div class="price">
+Rs. 500 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= SNACKS ================= -->
+<!-- SNACKS -->
 
-<div class="card product" data-category="Snacks" data-name="Biscuits" data-price="50">
+
+<div class="card product"
+data-category="Snacks"
+data-name="Biscuits"
+data-price="50">
+
 <div class="pic">🍪</div>
+
 <h3>Biscuits</h3>
-<div class="price">Rs. 50 / pack</div>
+
+<div class="price">
+Rs. 50 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Snacks" data-name="Chips" data-price="50">
+<div class="card product"
+data-category="Snacks"
+data-name="Chips"
+data-price="50">
+
 <div class="pic">🥔</div>
+
 <h3>Chips</h3>
-<div class="price">Rs. 50 / pack</div>
+
+<div class="price">
+Rs. 50 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= PERSONAL ================= -->
+<!-- PERSONAL -->
 
-<div class="card product" data-category="Personal" data-name="Shampoo" data-price="250">
+
+<div class="card product"
+data-category="Personal"
+data-name="Shampoo"
+data-price="250">
+
 <div class="pic">🧴</div>
+
 <h3>Shampoo</h3>
-<div class="price">Rs. 250 / bottle</div>
+
+<div class="price">
+Rs. 250 / bottle
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Personal" data-name="Soap" data-price="120">
+<div class="card product"
+data-category="Personal"
+data-name="Soap"
+data-price="120">
+
 <div class="pic">🧼</div>
+
 <h3>Soap</h3>
-<div class="price">Rs. 120 / piece</div>
+
+<div class="price">
+Rs. 120 / piece
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= HOUSEHOLD ================= -->
+<!-- HOUSEHOLD -->
 
-<div class="card product" data-category="Household" data-name="Laundry Powder" data-price="300">
+
+<div class="card product"
+data-category="Household"
+data-name="Laundry Powder"
+data-price="300">
+
 <div class="pic">🧼</div>
+
 <h3>Laundry Powder</h3>
-<div class="price">Rs. 300 / pack</div>
+
+<div class="price">
+Rs. 300 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Household" data-name="Dish Wash" data-price="200">
+<div class="card product"
+data-category="Household"
+data-name="Dish Wash"
+data-price="200">
+
 <div class="pic">🧽</div>
+
 <h3>Dish Wash</h3>
-<div class="price">Rs. 200 / bottle</div>
+
+<div class="price">
+Rs. 200 / bottle
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= BABY ================= -->
+<!-- BABY -->
 
-<div class="card product" data-category="Baby" data-name="Baby Diapers" data-price="800">
+
+<div class="card product"
+data-category="Baby"
+data-name="Baby Diapers"
+data-price="800">
+
 <div class="pic">👶</div>
+
 <h3>Baby Diapers</h3>
-<div class="price">Rs. 800 / pack</div>
+
+<div class="price">
+Rs. 800 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="Baby" data-name="Baby Soap" data-price="180">
+<div class="card product"
+data-category="Baby"
+data-name="Baby Soap"
+data-price="180">
+
 <div class="pic">🧼</div>
+
 <h3>Baby Soap</h3>
-<div class="price">Rs. 180 / piece</div>
+
+<div class="price">
+Rs. 180 / piece
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<!-- ================= MORE ================= -->
+<!-- MORE -->
 
-<div class="card product" data-category="More" data-name="Salt" data-price="60">
+
+<div class="card product"
+data-category="More"
+data-name="Salt"
+data-price="60">
+
 <div class="pic">🧂</div>
+
 <h3>Salt</h3>
-<div class="price">Rs. 60 / pack</div>
+
+<div class="price">
+Rs. 60 / pack
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
+
+<button type="button"
+onclick="changeQty(this,1)">+</button>
+
 </div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
 </div>
 
 
-<div class="card product" data-category="More" data-name="Match Box" data-price="20">
+<div class="card product"
+data-category="More"
+data-name="Match Box"
+data-price="20">
+
 <div class="pic">🔥</div>
+
 <h3>Match Box</h3>
-<div class="price">Rs. 20 / box</div>
+
+<div class="price">
+Rs. 20 / box
+</div>
 
 <div class="quantity">
-<button onclick="changeQty(this,-1)">−</button>
+
+<button type="button"
+onclick="changeQty(this,-1)">−</button>
+
 <span>0</span>
-<button onclick="changeQty(this,1)">+</button>
-</div>
 
-<button class="order" onclick="addToCart(this)">Add to Bill</button>
-</div>
-
+<button type="button"
+onclick="changeQty(this,1)">+</button>
 
 </div>
+
+<button class="order"
+type="button"
+onclick="addToCart(this)">
+Add to Bill
+</button>
+
+</div>
+
+
+</div>
+
 </section>
 
 
-<!-- ================= BILL ================= -->
+<!-- BILL -->
 
 <section id="cart">
 
 <div class="cart">
 
-<h2>🧾 My Bill / Cart</h2>
+<h2>
+🧾 My Bill / Cart
+</h2>
+
 
 <div id="cartItems">
-<p>No products added yet.</p>
+
+<p>
+No products added yet.
+</p>
+
 </div>
+
 
 <div class="total">
-Total: Rs. <span id="cartTotal">0</span>
+
+Total: Rs.
+<span id="cartTotal">0</span>
+
 </div>
 
-<button class="whatsapp-order" onclick="sendOrder()">
+
+<button
+class="whatsapp-order"
+type="button"
+onclick="sendOrder()">
+
 💬 Send Bill on WhatsApp
+
 </button>
 
-<button class="clear" onclick="clearCart()">
+
+<button
+class="clear"
+type="button"
+onclick="clearCart()">
+
 Clear Bill
+
 </button>
 
 </div>
@@ -937,192 +1582,150 @@ Clear Bill
 </section>
 
 
+<!-- CONTACT -->
+
 <section id="contact" class="contact">
 
-<h2>Order From Home</h2>
+<h2>
+Order From Home
+</h2>
 
-<p>Easy • Safe • Reliable</p>
+<p>
+Easy • Safe • Reliable
+</p>
 
 <br>
 
-<a class="btn"
+
+<a
+class="btn"
 href="https://wa.me/923111263960?text=Assalam%20o%20Alaikum%2C%20mujhe%20order%20karna%20hai."
 target="_blank">
+
 💬 WhatsApp: 03111263960
+
 </a>
 
 </section>
 
+
 </main>
 
 
+<!-- FOOTER -->
+
 <footer class="footer">
 
+
 <div>
-<h3>B.S INSAF GENERAL STORE</h3>
+
+<h3>
+B.S INSAF GENERAL STORE
+</h3>
+
 <p>
 Daily ration, groceries and household products
 at reasonable prices.
 </p>
+
 </div>
 
-<div>
-<h3>Quick Links</h3>
-<p><a href="#home">Home</a></p>
-<p><a href="#products" onclick="showAllProducts()">All Products</a></p>
-<p><a href="#categories">Categories</a></p>
-<p><a href="#cart">My Bill</a></p>
-<p><a href="#contact">Contact</a></p>
-</div>
 
 <div>
-<h3>Contact Us</h3>
-<p>📞 03111263960</p>
-<p>🟢 WhatsApp: 03111263960</p>
-<p>📍 Your City, Pakistan</p>
+
+<h3>
+Quick Links
+</h3>
+
+<p>
+<a href="#home">Home</a>
+</p>
+
+<p>
+<a href="#products"
+onclick="showAllProducts()">
+All Products
+</a>
+</p>
+
+<p>
+<a href="#categories">
+Categories
+</a>
+</p>
+
+<p>
+<a href="#cart">
+My Bill
+</a>
+</p>
+
+<p>
+<a href="#contact">
+Contact
+</a>
+</p>
+
 </div>
 
+
 <div>
-<h3>Follow Us</h3>
-<p>Facebook • WhatsApp • TikTok • YouTube</p>
+
+<h3>
+Contact Us
+</h3>
+
+<p>
+📞 03111263960
+</p>
+
+<p>
+🟢 WhatsApp: 03111263960
+</p>
+
+<p>
+📍 Your City, Pakistan
+</p>
+
 </div>
+
+
+<div>
+
+<h3>
+Follow Us
+</h3>
+
+<p>
+Facebook • WhatsApp • TikTok • YouTube
+</p>
+
+</div>
+
 
 </footer>
 
 
 <div class="copy">
-© 2026 B.S Insaf General Store. All Rights Reserved.
+
+© 2026 B.S Insaf General Store.
+All Rights Reserved.
+
 </div>
 
 
+<!-- JAVASCRIPT -->
+
 <script>
 
-let cart=[];
+let cart = [];
 
 
-function changeQty(button,change){
+/* =========================
+   PLUS / MINUS
+========================= */
 
-let span=button.parentElement.querySelector("span");
+function changeQty(button, change){
 
-let qty=parseInt(span.innerText)+change;
-
-if(qty<0){
-qty=0;
-}
-
-span.innerText=qty;
-
-}
-
-
-function addToCart(button){
-
-let card=button.closest(".product");
-
-let name=card.dataset.name;
-
-let price=parseInt(card.dataset.price);
-
-let qty=parseInt(
-card.querySelector(".quantity span").innerText
-);
-
-if(qty<=0){
-
-alert("Please select quantity first.");
-
-return;
-
-}
-
-let existing=cart.find(function(item){
-return item.name===name;
-});
-
-if(existing){
-
-existing.qty+=qty;
-
-}else{
-
-cart.push({
-name:name,
-price:price,
-qty:qty
-});
-
-}
-
-card.querySelector(".quantity span").innerText="0";
-
-updateCart();
-
-document.getElementById("cart").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-function updateCart(){
-
-let box=document.getElementById("cartItems");
-
-let total=0;
-
-if(cart.length===0){
-
-box.innerHTML="<p>No products added yet.</p>";
-
-document.getElementById("cartTotal").innerText="0";
-
-return;
-
-}
-
-box.innerHTML="";
-
-cart.forEach(function(item,index){
-
-let amount=item.price*item.qty;
-
-total+=amount;
-
-let div=document.createElement("div");
-
-div.className="cart-item";
-
-div.innerHTML=
-"<div><strong>"+item.name+"</strong><br>"+
-"Rs. "+item.price+" × "+item.qty+
-" = Rs. "+amount+"</div>"+
-"<button onclick='removeItem("+index+")'>Remove</button>";
-
-box.appendChild(div);
-
-});
-
-document.getElementById("cartTotal").innerText=total;
-
-}
-
-
-function removeItem(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-}
-
-
-function clearCart(){
-
-cart=[];
-
-updateCart();
-
-}
-
-
-f
+    let span =
+   
