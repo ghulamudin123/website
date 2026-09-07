@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>B.S Insaf General Store</title>
 
-<meta name="description" content="B.S Insaf General Store - Grocery Store">
+<meta name="description"
+content="B.S Insaf General Store - Grocery Store">
 
 <style>
 
@@ -22,16 +24,16 @@ body{
     color:#222;
 }
 
-/* ================= BACKGROUND UPLOAD ================= */
+/* ================= BACKGROUND BUTTON ================= */
 
-.background-upload{
-    background:#ffffff;
-    padding:12px;
+.background-tools{
+    background:white;
+    padding:10px;
     text-align:center;
     border-bottom:1px solid #ddd;
 }
 
-.background-upload label{
+.bg-button{
     display:inline-block;
     background:#006b55;
     color:white;
@@ -39,63 +41,67 @@ body{
     border-radius:9px;
     font-weight:bold;
     cursor:pointer;
+    margin:3px;
 }
 
-#bgImage{
+.remove-bg{
+    background:#d32f2f;
+}
+
+#backgroundInput{
     display:none;
 }
 
 /* ================= HEADER ================= */
 
 header{
-    position:relative;
-    min-height:260px;
 
-    color:white;
-    text-align:center;
+    min-height:250px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    overflow:hidden;
+    text-align:center;
+
+    color:white;
 
     background:
-        linear-gradient(
-            rgba(0,63,50,.60),
-            rgba(0,63,50,.68)
-        ),
-        url("https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=1400&q=85");
+    linear-gradient(
+        rgba(0,63,50,.55),
+        rgba(0,63,50,.65)
+    ),
+    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85");
 
     background-size:cover;
     background-position:center;
+
+    transition:.3s;
 }
 
 .header-content{
-    position:relative;
-    z-index:2;
-    padding:25px 15px;
-}
-
-header h1{
-    font-size:32px;
-    margin-bottom:8px;
-    text-shadow:0 2px 5px rgba(0,0,0,.6);
-}
-
-header p{
-    font-size:16px;
-    text-shadow:0 2px 4px rgba(0,0,0,.6);
+    padding:30px 15px;
 }
 
 .shop-badge{
     display:inline-block;
-    margin-bottom:12px;
     background:white;
     color:#006b55;
-    padding:8px 15px;
-    border-radius:25px;
+    padding:8px 16px;
+    border-radius:30px;
     font-weight:bold;
+    margin-bottom:12px;
+}
+
+header h1{
+    font-size:31px;
+    margin-bottom:8px;
+    text-shadow:0 2px 5px #000;
+}
+
+header p{
+    font-size:16px;
+    text-shadow:0 2px 4px #000;
 }
 
 /* ================= CONTAINER ================= */
@@ -119,7 +125,6 @@ header p{
     border-radius:10px;
     font-size:16px;
     outline:none;
-    background:white;
 }
 
 /* ================= CATEGORIES ================= */
@@ -151,36 +156,41 @@ header p{
 .products{
     display:grid;
     grid-template-columns:
-        repeat(auto-fill,minmax(170px,1fr));
+    repeat(auto-fill,minmax(170px,1fr));
 
     gap:15px;
-    margin-top:10px;
 }
 
 .product{
     background:white;
     border-radius:14px;
-    padding:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.10);
+    padding:10px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.12);
+
     text-align:center;
 }
 
+/* PRODUCT IMAGE */
+
 .product-image{
     width:100%;
-    height:130px;
+    height:140px;
+
     border-radius:10px;
+
+    overflow:hidden;
 
     background:#e8f3ef;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:65px;
-
     margin-bottom:10px;
+}
 
-    overflow:hidden;
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .product h3{
@@ -190,22 +200,25 @@ header p{
 
 .price{
     color:#006b55;
-    font-weight:bold;
     font-size:18px;
-    margin-bottom:10px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-/* ================= QUANTITY ================= */
+/* ================= PLUS MINUS ================= */
 
 .quantity{
     display:flex;
     align-items:center;
     justify-content:center;
+
     gap:10px;
+
     margin:8px 0;
 }
 
 .qty-btn{
+
     width:40px;
     height:40px;
 
@@ -219,26 +232,41 @@ header p{
     font-weight:bold;
 
     cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.qty-btn:active{
+    transform:scale(.9);
 }
 
 .qty-number{
     min-width:35px;
-    font-size:18px;
+    font-size:19px;
     font-weight:bold;
 }
 
+/* ================= ADD BUTTON ================= */
+
 .add-btn{
+
     width:100%;
+
     border:none;
 
-    padding:10px;
+    padding:11px;
 
     border-radius:8px;
 
     background:#ff9800;
+
     color:white;
 
     font-weight:bold;
+
+    font-size:15px;
 
     cursor:pointer;
 }
@@ -246,15 +274,17 @@ header p{
 /* ================= CART ================= */
 
 .cart{
+
     background:white;
 
     margin-top:25px;
+
     padding:18px;
 
     border-radius:15px;
 
     box-shadow:
-        0 2px 10px rgba(0,0,0,.12);
+    0 2px 10px rgba(0,0,0,.12);
 }
 
 .cart h2{
@@ -263,8 +293,11 @@ header p{
 }
 
 .cart-item{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:8px;
@@ -286,21 +319,25 @@ header p{
 }
 
 .small-btn{
-    width:30px;
-    height:30px;
+
+    width:32px;
+    height:32px;
 
     border:none;
+
     border-radius:50%;
 
     background:#006b55;
+
     color:white;
 
-    font-size:18px;
+    font-size:20px;
 
     cursor:pointer;
 }
 
 .cart-total{
+
     text-align:right;
 
     font-size:22px;
@@ -313,8 +350,11 @@ header p{
 }
 
 .empty{
+
     text-align:center;
+
     padding:20px;
+
     color:#777;
 }
 
@@ -326,6 +366,7 @@ header p{
 
 .customer-form input,
 .customer-form textarea{
+
     width:100%;
 
     padding:13px;
@@ -344,7 +385,10 @@ header p{
     resize:vertical;
 }
 
+/* ================= WHATSAPP ================= */
+
 .order-btn{
+
     width:100%;
 
     background:#25D366;
@@ -364,7 +408,10 @@ header p{
     cursor:pointer;
 }
 
+/* ================= CLEAR ================= */
+
 .clear-btn{
+
     width:100%;
 
     margin-top:10px;
@@ -387,14 +434,18 @@ header p{
 /* ================= NO RESULT ================= */
 
 .no-result{
+
     text-align:center;
+
     padding:30px;
+
     display:none;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
+
     margin-top:30px;
 
     background:#003f32;
@@ -405,7 +456,6 @@ footer{
 
     padding:20px;
 
-    font-size:14px;
 }
 
 /* ================= MOBILE ================= */
@@ -413,7 +463,7 @@ footer{
 @media(max-width:500px){
 
     header{
-        min-height:230px;
+        min-height:220px;
     }
 
     header h1{
@@ -426,12 +476,11 @@ footer{
     }
 
     .product{
-        padding:9px;
+        padding:8px;
     }
 
     .product-image{
-        height:110px;
-        font-size:55px;
+        height:105px;
     }
 
     .product h3{
@@ -441,6 +490,13 @@ footer{
     .price{
         font-size:16px;
     }
+
+    .qty-btn{
+        width:36px;
+        height:36px;
+        font-size:22px;
+    }
+
 }
 
 </style>
@@ -450,30 +506,40 @@ footer{
 
 
 <!-- =================================================
-     GALLERY BACKGROUND BUTTON
+     BACKGROUND CONTROLS
 ================================================= -->
 
-<div class="background-upload">
+<div class="background-tools">
 
-    <label for="bgImage">
+    <label
+        class="bg-button"
+        for="backgroundInput">
+
         🖼️ Choose Shop Background
+
     </label>
+
+    <button
+        class="bg-button remove-bg"
+        onclick="removeBackground()">
+
+        ❌ Remove Background
+
+    </button>
 
     <input
         type="file"
-        id="bgImage"
-        accept="image/*"
-        onchange="changeBackground(event)"
-    >
+        id="backgroundInput"
+        accept="image/*">
 
 </div>
 
 
 <!-- =================================================
-     SHOP HEADER
+     HEADER
 ================================================= -->
 
-<header>
+<header id="shopHeader">
 
     <div class="header-content">
 
@@ -507,8 +573,7 @@ footer{
         type="text"
         id="searchInput"
         placeholder="🔍 Search saman..."
-        oninput="renderProducts()"
-    >
+        oninput="renderProducts()">
 
 </div>
 
@@ -566,26 +631,23 @@ footer{
     </div>
 
 
-    <!-- CUSTOMER INFORMATION -->
+    <!-- CUSTOMER -->
 
     <div class="customer-form">
 
         <input
             type="text"
             id="customerName"
-            placeholder="Customer Name"
-        >
+            placeholder="Customer Name">
 
         <input
             type="tel"
             id="customerPhone"
-            placeholder="Phone Number"
-        >
+            placeholder="Phone Number">
 
         <textarea
             id="customerAddress"
-            placeholder="Customer Address"
-        ></textarea>
+            placeholder="Customer Address"></textarea>
 
 
         <button
@@ -625,7 +687,16 @@ footer{
    WHATSAPP NUMBER
 ================================================= */
 
-const SHOP_WHATSAPP = "923001234567";
+/*
+   YAHAN APNA WHATSAPP NUMBER LIKHEIN.
+
+   Example:
+   03111263960
+
+   + sign NAHI lagana.
+*/
+
+const SHOP_WHATSAPP = "03111263960";
 
 
 /* =================================================
@@ -634,149 +705,167 @@ const SHOP_WHATSAPP = "923001234567";
 
 const products = [
 
-    {
-        id:1,
-        name:"Sugar",
-        price:50,
-        category:"Grocery",
-        emoji:"🍚"
-    },
+{
+    id:1,
+    name:"Sugar",
+    price:50,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:2,
-        name:"Rice",
-        price:200,
-        category:"Grocery",
-        emoji:"🍚"
-    },
+{
+    id:2,
+    name:"Rice",
+    price:200,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:3,
-        name:"Flour",
-        price:150,
-        category:"Grocery",
-        emoji:"🌾"
-    },
+{
+    id:3,
+    name:"Flour",
+    price:150,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:4,
-        name:"Cooking Oil",
-        price:550,
-        category:"Grocery",
-        emoji:"🫗"
-    },
+{
+    id:4,
+    name:"Cooking Oil",
+    price:550,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:5,
-        name:"Tea",
-        price:300,
-        category:"Grocery",
-        emoji:"🍵"
-    },
+{
+    id:5,
+    name:"Tea",
+    price:300,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:6,
-        name:"Salt",
-        price:50,
-        category:"Grocery",
-        emoji:"🧂"
-    },
+{
+    id:6,
+    name:"Salt",
+    price:50,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1518110925495-5fe2a1f6c8f0?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:7,
-        name:"Lentils",
-        price:250,
-        category:"Grocery",
-        emoji:"🥣"
-    },
+{
+    id:7,
+    name:"Lentils",
+    price:250,
+    category:"Grocery",
+    image:
+    "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:8,
-        name:"Milk",
-        price:200,
-        category:"Dairy",
-        emoji:"🥛"
-    },
+{
+    id:8,
+    name:"Milk",
+    price:200,
+    category:"Dairy",
+    image:
+    "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:9,
-        name:"Bread",
-        price:120,
-        category:"Bakery",
-        emoji:"🍞"
-    },
+{
+    id:9,
+    name:"Bread",
+    price:120,
+    category:"Bakery",
+    image:
+    "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:10,
-        name:"Eggs",
-        price:300,
-        category:"Dairy",
-        emoji:"🥚"
-    },
+{
+    id:10,
+    name:"Eggs",
+    price:300,
+    category:"Dairy",
+    image:
+    "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:11,
-        name:"Biscuits",
-        price:80,
-        category:"Snacks",
-        emoji:"🍪"
-    },
+{
+    id:11,
+    name:"Biscuits",
+    price:80,
+    category:"Snacks",
+    image:
+    "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:12,
-        name:"Chips",
-        price:100,
-        category:"Snacks",
-        emoji:"🍟"
-    },
+{
+    id:12,
+    name:"Chips",
+    price:100,
+    category:"Snacks",
+    image:
+    "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:13,
-        name:"Soap",
-        price:120,
-        category:"Household",
-        emoji:"🧼"
-    },
+{
+    id:13,
+    name:"Soap",
+    price:120,
+    category:"Household",
+    image:
+    "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:14,
-        name:"Shampoo",
-        price:250,
-        category:"Personal Care",
-        emoji:"🧴"
-    },
+{
+    id:14,
+    name:"Shampoo",
+    price:250,
+    category:"Personal Care",
+    image:
+    "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:15,
-        name:"Toothpaste",
-        price:180,
-        category:"Personal Care",
-        emoji:"🪥"
-    },
+{
+    id:15,
+    name:"Toothpaste",
+    price:180,
+    category:"Personal Care",
+    image:
+    "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:16,
-        name:"Detergent",
-        price:300,
-        category:"Household",
-        emoji:"🧺"
-    },
+{
+    id:16,
+    name:"Detergent",
+    price:300,
+    category:"Household",
+    image:
+    "https://images.unsplash.com/photo-1585832770485-e68a5dbdec03?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:17,
-        name:"Cold Drink",
-        price:150,
-        category:"Drinks",
-        emoji:"🥤"
-    },
+{
+    id:17,
+    name:"Cold Drink",
+    price:150,
+    category:"Drinks",
+    image:
+    "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80"
+},
 
-    {
-        id:18,
-        name:"Water Bottle",
-        price:80,
-        category:"Drinks",
-        emoji:"💧"
-    }
+{
+    id:18,
+    name:"Water Bottle",
+    price:80,
+    category:"Drinks",
+    image:
+    "https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&w=500&q=80"
+}
 
 ];
 
@@ -791,78 +880,94 @@ let selectedCategory = "All";
 
 
 /* =================================================
-   BACKGROUND IMAGE
+   DEFAULT BACKGROUND
 ================================================= */
 
-function changeBackground(event){
+const defaultBackground =
+`linear-gradient(
+    rgba(0,63,50,.55),
+    rgba(0,63,50,.65)
+),
+url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85")`;
 
-    const file =
-        event.target.files[0];
 
-    if(!file){
-        return;
+/* =================================================
+   CHANGE BACKGROUND
+================================================= */
+
+document
+.getElementById("backgroundInput")
+.addEventListener(
+    "change",
+    function(event){
+
+        const file =
+            event.target.files[0];
+
+        if(!file){
+            return;
+        }
+
+        if(!file.type.startsWith("image/")){
+
+            alert(
+                "Please select an image."
+            );
+
+            return;
+        }
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload =
+            function(e){
+
+                const image =
+                    e.target.result;
+
+
+                const header =
+                    document.getElementById(
+                        "shopHeader"
+                    );
+
+
+                header.style.backgroundImage =
+                    "linear-gradient(" +
+                    "rgba(0,63,50,.45)," +
+                    "rgba(0,63,50,.60)" +
+                    ")," +
+                    "url('" +
+                    image +
+                    "')";
+
+
+                try{
+
+                    localStorage.setItem(
+                        "BSInsafBackground",
+                        image
+                    );
+
+                }catch(error){
+
+                    alert(
+                        "Image bohat bari hai. " +
+                        "Choti image select karein."
+                    );
+
+                }
+
+            };
+
+
+        reader.readAsDataURL(file);
+
     }
-
-    if(
-        !file.type.startsWith("image/")
-    ){
-
-        alert(
-            "Please select an image."
-        );
-
-        return;
-    }
-
-
-    const reader =
-        new FileReader();
-
-
-    reader.onload =
-        function(e){
-
-            const image =
-                e.target.result;
-
-
-            document.querySelector("header")
-                .style.backgroundImage =
-                "linear-gradient(" +
-                "rgba(0,63,50,.55)," +
-                "rgba(0,63,50,.65)" +
-                ")," +
-                "url('" +
-                image +
-                "')";
-
-
-            /*
-             Save picture in browser
-            */
-
-            try{
-
-                localStorage.setItem(
-                    "shopBackground",
-                    image
-                );
-
-            }catch(error){
-
-                alert(
-                    "Picture is too large. " +
-                    "Please select a smaller picture."
-                );
-
-            }
-
-        };
-
-
-    reader.readAsDataURL(file);
-
-}
+);
 
 
 /* =================================================
@@ -871,21 +976,41 @@ function changeBackground(event){
 
 const savedBackground =
     localStorage.getItem(
-        "shopBackground"
+        "BSInsafBackground"
     );
 
 
 if(savedBackground){
 
-    document.querySelector("header")
-        .style.backgroundImage =
+    document.getElementById(
+        "shopHeader"
+    ).style.backgroundImage =
         "linear-gradient(" +
-        "rgba(0,63,50,.55)," +
-        "rgba(0,63,50,.65)" +
+        "rgba(0,63,50,.45)," +
+        "rgba(0,63,50,.60)" +
         ")," +
         "url('" +
         savedBackground +
         "')";
+
+}
+
+
+/* =================================================
+   REMOVE BACKGROUND
+================================================= */
+
+function removeBackground(){
+
+    localStorage.removeItem(
+        "BSInsafBackground"
+    );
+
+
+    document.getElementById(
+        "shopHeader"
+    ).style.backgroundImage =
+        defaultBackground;
 
 }
 
@@ -897,12 +1022,12 @@ if(savedBackground){
 function formatPrice(price){
 
     return "Rs. " +
-        Number(price).toLocaleString(
-            "en-PK",
-            {
-                maximumFractionDigits:0
-            }
-        );
+    Number(price).toLocaleString(
+        "en-PK",
+        {
+            maximumFractionDigits:0
+        }
+    );
 
 }
 
@@ -913,7 +1038,7 @@ function formatPrice(price){
 
 function renderCategories(){
 
-    const categoriesDiv =
+    const div =
         document.getElementById(
             "categories"
         );
@@ -923,14 +1048,13 @@ function renderCategories(){
         "All",
         ...new Set(
             products.map(
-                product =>
-                    product.category
+                p => p.category
             )
         )
     ];
 
 
-    categoriesDiv.innerHTML = "";
+    div.innerHTML = "";
 
 
     categories.forEach(
@@ -969,9 +1093,7 @@ function renderCategories(){
                 };
 
 
-            categoriesDiv.appendChild(
-                button
-            );
+            div.appendChild(button);
 
         }
     );
@@ -980,20 +1102,19 @@ function renderCategories(){
 
 
 /* =================================================
-   PRODUCTS
+   RENDER PRODUCTS
 ================================================= */
 
 function renderProducts(){
 
-    const productsDiv =
+    const div =
         document.getElementById(
             "products"
         );
 
 
     const search =
-        document
-        .getElementById(
+        document.getElementById(
             "searchInput"
         )
         .value
@@ -1001,7 +1122,7 @@ function renderProducts(){
         .trim();
 
 
-    productsDiv.innerHTML = "";
+    div.innerHTML = "";
 
 
     let found = 0;
@@ -1010,25 +1131,23 @@ function renderProducts(){
     products.forEach(
         product => {
 
-            const matchesSearch =
+            const searchMatch =
                 product.name
                 .toLowerCase()
                 .includes(search);
 
 
-            const matchesCategory =
+            const categoryMatch =
                 selectedCategory === "All" ||
                 product.category ===
                 selectedCategory;
 
 
             if(
-                !matchesSearch ||
-                !matchesCategory
+                !searchMatch ||
+                !categoryMatch
             ){
-
                 return;
-
             }
 
 
@@ -1052,7 +1171,16 @@ function renderProducts(){
             card.innerHTML = `
 
                 <div class="product-image">
-                    ${product.emoji}
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                        loading="lazy"
+                        onerror="
+                        this.style.display='none';
+                        this.parentElement.innerHTML='🛒';
+                        ">
+
                 </div>
 
                 <h3>
@@ -1067,25 +1195,43 @@ function renderProducts(){
 
                     <button
                         class="qty-btn"
-                        onclick="changeQty(${product.id},-1)">
+                        onclick="
+                        changeQty(
+                            ${product.id},
+                            -1
+                        )">
+
                         −
+
                     </button>
 
-                    <span class="qty-number">
+                    <span
+                        class="qty-number">
+
                         ${qty}
+
                     </span>
 
                     <button
                         class="qty-btn"
-                        onclick="changeQty(${product.id},1)">
+                        onclick="
+                        changeQty(
+                            ${product.id},
+                            1
+                        )">
+
                         +
+
                     </button>
 
                 </div>
 
                 <button
                     class="add-btn"
-                    onclick="addToCart(${product.id})">
+                    onclick="
+                    addToCart(
+                        ${product.id}
+                    )">
 
                     Add to Cart
 
@@ -1094,9 +1240,7 @@ function renderProducts(){
             `;
 
 
-            productsDiv.appendChild(
-                card
-            );
+            div.appendChild(card);
 
         }
     );
@@ -1136,7 +1280,7 @@ function addToCart(id){
 
 
 /* =================================================
-   PLUS / MINUS
+   PLUS MINUS
 ================================================= */
 
 function changeQty(
@@ -1169,18 +1313,18 @@ function changeQty(
 
 
 /* =================================================
-   CART
+   RENDER CART
 ================================================= */
 
 function renderCart(){
 
-    const cartItems =
+    const div =
         document.getElementById(
             "cartItems"
         );
 
 
-    cartItems.innerHTML = "";
+    div.innerHTML = "";
 
 
     const ids =
@@ -1189,10 +1333,10 @@ function renderCart(){
 
     if(ids.length === 0){
 
-        cartItems.innerHTML =
-            '<div class="empty">' +
-            'Cart is empty' +
-            '</div>';
+        div.innerHTML =
+            `<div class="empty">
+                Cart is empty
+            </div>`;
 
 
         document.getElementById(
@@ -1214,15 +1358,12 @@ function renderCart(){
 
             const product =
                 products.find(
-                    p =>
-                        p.id == id
+                    p => p.id == id
                 );
 
 
             if(!product){
-
                 return;
-
             }
 
 
@@ -1256,7 +1397,9 @@ function renderCart(){
                     <br>
 
                     <small>
-                        ${formatPrice(product.price)}
+                        ${formatPrice(
+                            product.price
+                        )}
                         × ${qty}
                     </small>
 
@@ -1266,8 +1409,14 @@ function renderCart(){
 
                     <button
                         class="small-btn"
-                        onclick="changeQty(${product.id},-1)">
+                        onclick="
+                        changeQty(
+                            ${product.id},
+                            -1
+                        )">
+
                         −
+
                     </button>
 
                     <strong>
@@ -1276,6 +1425,260 @@ function renderCart(){
 
                     <button
                         class="small-btn"
-                        onclick="changeQty(${product.id},1)">
+                        onclick="
+                        changeQty(
+                            ${product.id},
+                            1
+                        )">
+
                         +
-  
+
+                    </button>
+
+                </div>
+
+                <strong>
+                    ${formatPrice(
+                        itemTotal
+                    )}
+                </strong>
+
+            `;
+
+
+            div.appendChild(item);
+
+        }
+    );
+
+
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+        formatPrice(total);
+
+}
+
+
+/* =================================================
+   WHATSAPP ORDER
+================================================= */
+
+function orderWhatsApp(){
+
+    const ids =
+        Object.keys(cart);
+
+
+    if(ids.length === 0){
+
+        alert(
+            "Please add saman to cart first."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        !SHOP_WHATSAPP ||
+        SHOP_WHATSAPP.includes(
+            "123456"
+        )
+    ){
+
+        alert(
+            "HTML mein apna WhatsApp number likhein."
+        );
+
+        return;
+
+    }
+
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value.trim();
+
+
+    const address =
+        document.getElementById(
+            "customerAddress"
+        ).value.trim();
+
+
+    if(!name){
+
+        alert(
+            "Customer name likhein."
+        );
+
+        return;
+
+    }
+
+
+    if(!phone){
+
+        alert(
+            "Phone number likhein."
+        );
+
+        return;
+
+    }
+
+
+    if(!address){
+
+        alert(
+            "Customer address likhein."
+        );
+
+        return;
+
+    }
+
+
+    let message =
+        "🛒 B.S Insaf General Store Order\n\n";
+
+
+    message +=
+        "Customer Name: " +
+        name +
+        "\n";
+
+
+    message +=
+        "Phone: " +
+        phone +
+        "\n";
+
+
+    message +=
+        "Address: " +
+        address +
+        "\n\n";
+
+
+    message +=
+        "Order Details:\n";
+
+
+    let total = 0;
+
+
+    ids.forEach(
+        id => {
+
+            const product =
+                products.find(
+                    p => p.id == id
+                );
+
+
+            if(!product){
+                return;
+            }
+
+
+            const qty =
+                cart[id];
+
+
+            const itemTotal =
+                product.price * qty;
+
+
+            total += itemTotal;
+
+
+            message +=
+                product.name +
+                " × " +
+                qty +
+                " = " +
+                formatPrice(
+                    itemTotal
+                ) +
+                "\n";
+
+        }
+    );
+
+
+    message +=
+        "\nTOTAL = " +
+        formatPrice(total);
+
+
+    const url =
+        "https://wa.me/" +
+        SHOP_WHATSAPP +
+        "?text=" +
+        encodeURIComponent(
+            message
+        );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =================================================
+   CLEAR CART
+================================================= */
+
+function clearCart(){
+
+    if(
+        Object.keys(cart).length === 0
+    ){
+        return;
+    }
+
+
+    if(
+        confirm(
+            "Cart clear karna hai?"
+        )
+    ){
+
+        cart = {};
+
+        renderProducts();
+
+        renderCart();
+
+    }
+
+}
+
+
+/* =================================================
+   START
+================================================= */
+
+renderCategories();
+
+renderProducts();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
