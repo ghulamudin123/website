@@ -9,6 +9,7 @@
 <meta name="description" content="B.S Insaf General Store - Grocery Store">
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -21,23 +22,48 @@ body{
     color:#222;
 }
 
-/* ================= HEADER / SHOP BACKGROUND ================= */
+/* ================= BACKGROUND UPLOAD ================= */
+
+.background-upload{
+    background:#ffffff;
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.background-upload label{
+    display:inline-block;
+    background:#006b55;
+    color:white;
+    padding:11px 18px;
+    border-radius:9px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#bgImage{
+    display:none;
+}
+
+/* ================= HEADER ================= */
 
 header{
     position:relative;
     min-height:260px;
+
     color:white;
     text-align:center;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     overflow:hidden;
 
-    /* SHOP BACKGROUND PICTURE */
-    background-image:
+    background:
         linear-gradient(
-            rgba(0,63,50,.65),
-            rgba(0,63,50,.70)
+            rgba(0,63,50,.60),
+            rgba(0,63,50,.68)
         ),
         url("https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=1400&q=85");
 
@@ -54,12 +80,12 @@ header{
 header h1{
     font-size:32px;
     margin-bottom:8px;
-    text-shadow:0 2px 5px rgba(0,0,0,.5);
+    text-shadow:0 2px 5px rgba(0,0,0,.6);
 }
 
 header p{
     font-size:16px;
-    text-shadow:0 2px 4px rgba(0,0,0,.5);
+    text-shadow:0 2px 4px rgba(0,0,0,.6);
 }
 
 .shop-badge{
@@ -72,7 +98,7 @@ header p{
     font-weight:bold;
 }
 
-/* ================= MAIN ================= */
+/* ================= CONTAINER ================= */
 
 .container{
     max-width:1100px;
@@ -94,10 +120,6 @@ header p{
     font-size:16px;
     outline:none;
     background:white;
-}
-
-.search-box input:focus{
-    box-shadow:0 0 0 3px rgba(0,107,85,.15);
 }
 
 /* ================= CATEGORIES ================= */
@@ -128,7 +150,9 @@ header p{
 
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+    grid-template-columns:
+        repeat(auto-fill,minmax(170px,1fr));
+
     gap:15px;
     margin-top:10px;
 }
@@ -145,12 +169,17 @@ header p{
     width:100%;
     height:130px;
     border-radius:10px;
+
     background:#e8f3ef;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:65px;
+
     margin-bottom:10px;
+
     overflow:hidden;
 }
 
@@ -179,17 +208,17 @@ header p{
 .qty-btn{
     width:40px;
     height:40px;
+
     border:none;
     border-radius:50%;
+
     background:#006b55;
     color:white;
+
     font-size:25px;
     font-weight:bold;
-    cursor:pointer;
-}
 
-.qty-btn:active{
-    transform:scale(.92);
+    cursor:pointer;
 }
 
 .qty-number{
@@ -201,26 +230,31 @@ header p{
 .add-btn{
     width:100%;
     border:none;
+
     padding:10px;
+
     border-radius:8px;
+
     background:#ff9800;
     color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
 
-.add-btn:active{
-    transform:scale(.98);
+    font-weight:bold;
+
+    cursor:pointer;
 }
 
 /* ================= CART ================= */
 
 .cart{
     background:white;
+
     margin-top:25px;
     padding:18px;
+
     border-radius:15px;
-    box-shadow:0 2px 10px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.12);
 }
 
 .cart h2{
@@ -232,8 +266,11 @@ header p{
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:8px;
+
     padding:12px 0;
+
     border-bottom:1px solid #ddd;
 }
 
@@ -251,19 +288,27 @@ header p{
 .small-btn{
     width:30px;
     height:30px;
+
     border:none;
     border-radius:50%;
+
     background:#006b55;
     color:white;
+
     font-size:18px;
+
     cursor:pointer;
 }
 
 .cart-total{
     text-align:right;
+
     font-size:22px;
+
     font-weight:bold;
+
     color:#003f32;
+
     padding:15px 0;
 }
 
@@ -282,10 +327,15 @@ header p{
 .customer-form input,
 .customer-form textarea{
     width:100%;
+
     padding:13px;
+
     margin-bottom:10px;
+
     border:1px solid #bbb;
+
     border-radius:8px;
+
     font-size:15px;
 }
 
@@ -296,25 +346,41 @@ header p{
 
 .order-btn{
     width:100%;
+
     background:#25D366;
+
     color:white;
+
     border:none;
+
     padding:14px;
+
     border-radius:9px;
+
     font-size:17px;
+
     font-weight:bold;
+
     cursor:pointer;
 }
 
 .clear-btn{
     width:100%;
+
     margin-top:10px;
+
     background:#d32f2f;
+
     color:white;
+
     border:none;
+
     padding:12px;
+
     border-radius:9px;
+
     font-size:16px;
+
     cursor:pointer;
 }
 
@@ -330,10 +396,15 @@ header p{
 
 footer{
     margin-top:30px;
+
     background:#003f32;
+
     color:white;
+
     text-align:center;
+
     padding:20px;
+
     font-size:14px;
 }
 
@@ -370,30 +441,37 @@ footer{
     .price{
         font-size:16px;
     }
-
 }
 
-/* ================= SMALL PHONE ================= */
-
-@media(max-width:350px){
-
-    .products{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .qty-btn{
-        width:34px;
-        height:34px;
-        font-size:21px;
-    }
-
-}
 </style>
 </head>
 
 <body>
 
-<!-- ================= SHOP HEADER ================= -->
+
+<!-- =================================================
+     GALLERY BACKGROUND BUTTON
+================================================= -->
+
+<div class="background-upload">
+
+    <label for="bgImage">
+        🖼️ Choose Shop Background
+    </label>
+
+    <input
+        type="file"
+        id="bgImage"
+        accept="image/*"
+        onchange="changeBackground(event)"
+    >
+
+</div>
+
+
+<!-- =================================================
+     SHOP HEADER
+================================================= -->
 
 <header>
 
@@ -403,7 +481,9 @@ footer{
             🛒 Grocery Store
         </div>
 
-        <h1>B.S Insaf General Store</h1>
+        <h1>
+            B.S Insaf General Store
+        </h1>
 
         <p>
             Grocery • Daily Needs • Home Delivery
@@ -416,7 +496,10 @@ footer{
 
 <div class="container">
 
-<!-- ================= SEARCH ================= -->
+
+<!-- =================================================
+     SEARCH
+================================================= -->
 
 <div class="search-box">
 
@@ -430,7 +513,9 @@ footer{
 </div>
 
 
-<!-- ================= CATEGORIES ================= -->
+<!-- =================================================
+     CATEGORIES
+================================================= -->
 
 <div
     class="categories"
@@ -438,7 +523,9 @@ footer{
 </div>
 
 
-<!-- ================= PRODUCTS ================= -->
+<!-- =================================================
+     PRODUCTS
+================================================= -->
 
 <div
     class="products"
@@ -450,16 +537,22 @@ footer{
     class="no-result"
     id="noResult">
 
-    <h3>Saman nahi mila</h3>
+    <h3>
+        Saman nahi mila
+    </h3>
 
 </div>
 
 
-<!-- ================= CART ================= -->
+<!-- =================================================
+     CART
+================================================= -->
 
 <div class="cart">
 
-    <h2>🛒 Your Cart</h2>
+    <h2>
+        🛒 Your Cart
+    </h2>
 
     <div id="cartItems"></div>
 
@@ -473,7 +566,7 @@ footer{
     </div>
 
 
-    <!-- ================= CUSTOMER ================= -->
+    <!-- CUSTOMER INFORMATION -->
 
     <div class="customer-form">
 
@@ -528,33 +621,16 @@ footer{
 
 <script>
 
-/* =====================================================
+/* =================================================
    WHATSAPP NUMBER
-   =====================================================
-
-   Yahan apna asli WhatsApp number likhein.
-
-   Pakistan example:
-   923001234567
-
-   + sign nahi lagana.
-*/
+================================================= */
 
 const SHOP_WHATSAPP = "923001234567";
 
 
-/* =====================================================
+/* =================================================
    PRODUCTS
-   =====================================================
-
-   PRICE YAHAN SE CHANGE KARNA HAI.
-
-   price: 50  = Rs. 50
-   price: 150 = Rs. 150
-
-   IMPORTANT:
-   Yahan 100 se divide nahi hota.
-*/
+================================================= */
 
 const products = [
 
@@ -705,177 +781,330 @@ const products = [
 ];
 
 
-/* =====================================================
+/* =================================================
    CART
-   ===================================================== */
+================================================= */
 
 let cart = {};
 
 let selectedCategory = "All";
 
 
-/* =====================================================
-   PRICE
-   ===================================================== */
+/* =================================================
+   BACKGROUND IMAGE
+================================================= */
 
-function formatPrice(price){
+function changeBackground(event){
 
-    return "Rs. " +
-        Number(price).toLocaleString("en-PK",{
-            maximumFractionDigits:0
-        });
+    const file =
+        event.target.files[0];
+
+    if(!file){
+        return;
+    }
+
+    if(
+        !file.type.startsWith("image/")
+    ){
+
+        alert(
+            "Please select an image."
+        );
+
+        return;
+    }
+
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function(e){
+
+            const image =
+                e.target.result;
+
+
+            document.querySelector("header")
+                .style.backgroundImage =
+                "linear-gradient(" +
+                "rgba(0,63,50,.55)," +
+                "rgba(0,63,50,.65)" +
+                ")," +
+                "url('" +
+                image +
+                "')";
+
+
+            /*
+             Save picture in browser
+            */
+
+            try{
+
+                localStorage.setItem(
+                    "shopBackground",
+                    image
+                );
+
+            }catch(error){
+
+                alert(
+                    "Picture is too large. " +
+                    "Please select a smaller picture."
+                );
+
+            }
+
+        };
+
+
+    reader.readAsDataURL(file);
 
 }
 
 
-/* =====================================================
+/* =================================================
+   LOAD SAVED BACKGROUND
+================================================= */
+
+const savedBackground =
+    localStorage.getItem(
+        "shopBackground"
+    );
+
+
+if(savedBackground){
+
+    document.querySelector("header")
+        .style.backgroundImage =
+        "linear-gradient(" +
+        "rgba(0,63,50,.55)," +
+        "rgba(0,63,50,.65)" +
+        ")," +
+        "url('" +
+        savedBackground +
+        "')";
+
+}
+
+
+/* =================================================
+   PRICE FORMAT
+================================================= */
+
+function formatPrice(price){
+
+    return "Rs. " +
+        Number(price).toLocaleString(
+            "en-PK",
+            {
+                maximumFractionDigits:0
+            }
+        );
+
+}
+
+
+/* =================================================
    CATEGORIES
-   ===================================================== */
+================================================= */
 
 function renderCategories(){
 
     const categoriesDiv =
-        document.getElementById("categories");
+        document.getElementById(
+            "categories"
+        );
+
 
     const categories = [
         "All",
         ...new Set(
             products.map(
-                product => product.category
+                product =>
+                    product.category
             )
         )
     ];
 
+
     categoriesDiv.innerHTML = "";
 
-    categories.forEach(category => {
 
-        const button =
-            document.createElement("button");
+    categories.forEach(
+        category => {
 
-        button.className =
-            "category-btn " +
-            (
-                selectedCategory === category
-                ? "active"
-                : ""
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "category-btn " +
+                (
+                    selectedCategory ===
+                    category
+                    ? "active"
+                    : ""
+                );
+
+
+            button.textContent =
+                category;
+
+
+            button.onclick =
+                function(){
+
+                    selectedCategory =
+                        category;
+
+                    renderCategories();
+
+                    renderProducts();
+
+                };
+
+
+            categoriesDiv.appendChild(
+                button
             );
 
-        button.textContent = category;
-
-        button.onclick = function(){
-
-            selectedCategory = category;
-
-            renderCategories();
-
-            renderProducts();
-
-        };
-
-        categoriesDiv.appendChild(button);
-
-    });
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =================================================
    PRODUCTS
-   ===================================================== */
+================================================= */
 
 function renderProducts(){
 
     const productsDiv =
-        document.getElementById("products");
+        document.getElementById(
+            "products"
+        );
+
 
     const search =
         document
-        .getElementById("searchInput")
+        .getElementById(
+            "searchInput"
+        )
         .value
         .toLowerCase()
         .trim();
 
+
     productsDiv.innerHTML = "";
+
 
     let found = 0;
 
-    products.forEach(product => {
 
-        const matchesSearch =
-            product.name
-            .toLowerCase()
-            .includes(search);
+    products.forEach(
+        product => {
 
-        const matchesCategory =
-            selectedCategory === "All" ||
-            product.category === selectedCategory;
+            const matchesSearch =
+                product.name
+                .toLowerCase()
+                .includes(search);
 
-        if(
-            !matchesSearch ||
-            !matchesCategory
-        ){
-            return;
+
+            const matchesCategory =
+                selectedCategory === "All" ||
+                product.category ===
+                selectedCategory;
+
+
+            if(
+                !matchesSearch ||
+                !matchesCategory
+            ){
+
+                return;
+
+            }
+
+
+            found++;
+
+
+            const qty =
+                cart[product.id] || 0;
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "product";
+
+
+            card.innerHTML = `
+
+                <div class="product-image">
+                    ${product.emoji}
+                </div>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <div class="price">
+                    ${formatPrice(product.price)}
+                </div>
+
+                <div class="quantity">
+
+                    <button
+                        class="qty-btn"
+                        onclick="changeQty(${product.id},-1)">
+                        −
+                    </button>
+
+                    <span class="qty-number">
+                        ${qty}
+                    </span>
+
+                    <button
+                        class="qty-btn"
+                        onclick="changeQty(${product.id},1)">
+                        +
+                    </button>
+
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(${product.id})">
+
+                    Add to Cart
+
+                </button>
+
+            `;
+
+
+            productsDiv.appendChild(
+                card
+            );
+
         }
+    );
 
-        found++;
 
-        const qty =
-            cart[product.id] || 0;
-
-        const card =
-            document.createElement("div");
-
-        card.className = "product";
-
-        card.innerHTML = `
-
-            <div class="product-image">
-                ${product.emoji}
-            </div>
-
-            <h3>
-                ${product.name}
-            </h3>
-
-            <div class="price">
-                ${formatPrice(product.price)}
-            </div>
-
-            <div class="quantity">
-
-                <button
-                    class="qty-btn"
-                    onclick="changeQty(${product.id},-1)">
-                    −
-                </button>
-
-                <span class="qty-number">
-                    ${qty}
-                </span>
-
-                <button
-                    class="qty-btn"
-                    onclick="changeQty(${product.id},1)">
-                    +
-                </button>
-
-            </div>
-
-            <button
-                class="add-btn"
-                onclick="addToCart(${product.id})">
-
-                Add to Cart
-
-            </button>
-        `;
-
-        productsDiv.appendChild(card);
-
-    });
-
-    document.getElementById("noResult").style.display =
+    document.getElementById(
+        "noResult"
+    ).style.display =
         found === 0
         ? "block"
         : "none";
@@ -883,17 +1112,21 @@ function renderProducts(){
 }
 
 
-/* =====================================================
+/* =================================================
    ADD TO CART
-   ===================================================== */
+================================================= */
 
 function addToCart(id){
 
     if(!cart[id]){
+
         cart[id] = 0;
+
     }
 
+
     cart[id]++;
+
 
     renderProducts();
 
@@ -902,17 +1135,24 @@ function addToCart(id){
 }
 
 
-/* =====================================================
+/* =================================================
    PLUS / MINUS
-   ===================================================== */
+================================================= */
 
-function changeQty(id,amount){
+function changeQty(
+    id,
+    amount
+){
 
     if(!cart[id]){
+
         cart[id] = 0;
+
     }
 
+
     cart[id] += amount;
+
 
     if(cart[id] <= 0){
 
@@ -920,6 +1160,7 @@ function changeQty(id,amount){
 
     }
 
+
     renderProducts();
 
     renderCart();
@@ -927,314 +1168,114 @@ function changeQty(id,amount){
 }
 
 
-/* =====================================================
+/* =================================================
    CART
-   ===================================================== */
+================================================= */
 
 function renderCart(){
 
     const cartItems =
-        document.getElementById("cartItems");
+        document.getElementById(
+            "cartItems"
+        );
+
 
     cartItems.innerHTML = "";
 
+
     const ids =
         Object.keys(cart);
+
 
     if(ids.length === 0){
 
         cartItems.innerHTML =
-            '<div class="empty">Cart is empty</div>';
+            '<div class="empty">' +
+            'Cart is empty' +
+            '</div>';
 
-        document.getElementById("cartTotal")
-            .textContent = "Rs. 0";
+
+        document.getElementById(
+            "cartTotal"
+        ).textContent =
+            "Rs. 0";
+
 
         return;
+
     }
-
-    let total = 0;
-
-    ids.forEach(id => {
-
-        const product =
-            products.find(
-                p => p.id == id
-            );
-
-        if(!product){
-            return;
-        }
-
-        const qty =
-            cart[id];
-
-        const itemTotal =
-            product.price * qty;
-
-        total += itemTotal;
-
-        const item =
-            document.createElement("div");
-
-        item.className =
-            "cart-item";
-
-        item.innerHTML = `
-
-            <div class="cart-name">
-
-                ${product.name}
-
-                <br>
-
-                <small>
-                    ${formatPrice(product.price)}
-                    × ${qty}
-                </small>
-
-            </div>
-
-
-            <div class="cart-controls">
-
-                <button
-                    class="small-btn"
-                    onclick="changeQty(${product.id},-1)">
-                    −
-                </button>
-
-                <strong>
-                    ${qty}
-                </strong>
-
-                <button
-                    class="small-btn"
-                    onclick="changeQty(${product.id},1)">
-                    +
-                </button>
-
-            </div>
-
-
-            <strong>
-                ${formatPrice(itemTotal)}
-            </strong>
-
-        `;
-
-        cartItems.appendChild(item);
-
-    });
-
-    document.getElementById("cartTotal")
-        .textContent =
-        formatPrice(total);
-
-}
-
-
-/* =====================================================
-   WHATSAPP ORDER
-   ===================================================== */
-
-function orderWhatsApp(){
-
-    const ids =
-        Object.keys(cart);
-
-    if(ids.length === 0){
-
-        alert(
-            "Please add saman to cart first."
-        );
-
-        return;
-    }
-
-
-    if(
-        !SHOP_WHATSAPP ||
-        SHOP_WHATSAPP.includes("X")
-    ){
-
-        alert(
-            "HTML mein apna WhatsApp number likhein."
-        );
-
-        return;
-    }
-
-
-    const name =
-        document
-        .getElementById("customerName")
-        .value
-        .trim();
-
-    const phone =
-        document
-        .getElementById("customerPhone")
-        .value
-        .trim();
-
-    const address =
-        document
-        .getElementById("customerAddress")
-        .value
-        .trim();
-
-
-    if(!name){
-
-        alert(
-            "Customer name likhein."
-        );
-
-        return;
-    }
-
-
-    if(!phone){
-
-        alert(
-            "Phone number likhein."
-        );
-
-        return;
-    }
-
-
-    if(!address){
-
-        alert(
-            "Customer address likhein."
-        );
-
-        return;
-    }
-
-
-    let message =
-        "🛒 B.S Insaf General Store Order\n\n";
-
-
-    message +=
-        "Customer Name: " +
-        name +
-        "\n";
-
-
-    message +=
-        "Phone: " +
-        phone +
-        "\n";
-
-
-    message +=
-        "Address: " +
-        address +
-        "\n\n";
-
-
-    message +=
-        "Order Details:\n";
 
 
     let total = 0;
 
 
-    ids.forEach(id => {
+    ids.forEach(
+        id => {
 
-        const product =
-            products.find(
-                p => p.id == id
-            );
-
-        if(!product){
-            return;
-        }
-
-        const qty =
-            cart[id];
-
-        const itemTotal =
-            product.price * qty;
-
-        total += itemTotal;
+            const product =
+                products.find(
+                    p =>
+                        p.id == id
+                );
 
 
-        message +=
-            product.name +
-            " × " +
-            qty +
-            " = " +
-            formatPrice(itemTotal) +
-            "\n";
+            if(!product){
 
-    });
+                return;
+
+            }
 
 
-    message +=
-        "\nTOTAL = " +
-        formatPrice(total);
+            const qty =
+                cart[id];
 
 
-    const url =
-        "https://wa.me/" +
-        SHOP_WHATSAPP +
-        "?text=" +
-        encodeURIComponent(message);
+            const itemTotal =
+                product.price * qty;
 
 
-    window.open(
-        url,
-        "_blank"
-    );
-
-}
+            total += itemTotal;
 
 
-/* =====================================================
-   CLEAR CART
-   ===================================================== */
-
-function clearCart(){
-
-    if(
-        Object.keys(cart).length === 0
-    ){
-        return;
-    }
+            const item =
+                document.createElement(
+                    "div"
+                );
 
 
-    if(
-        confirm(
-            "Cart clear karna hai?"
-        )
-    ){
-
-        cart = {};
-
-        renderProducts();
-
-        renderCart();
-
-    }
-
-}
+            item.className =
+                "cart-item";
 
 
-/* =====================================================
-   START
-   ===================================================== */
+            item.innerHTML = `
 
-renderCategories();
+                <div class="cart-name">
 
-renderProducts();
+                    ${product.name}
 
-renderCart();
+                    <br>
 
-</script>
+                    <small>
+                        ${formatPrice(product.price)}
+                        × ${qty}
+                    </small>
 
-</body>
-</html>
+                </div>
+
+                <div class="cart-controls">
+
+                    <button
+                        class="small-btn"
+                        onclick="changeQty(${product.id},-1)">
+                        −
+                    </button>
+
+                    <strong>
+                        ${qty}
+                    </strong>
+
+                    <button
+                        class="small-btn"
+                        onclick="changeQty(${product.id},1)">
+                        +
+  
