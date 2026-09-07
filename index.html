@@ -3,7 +3,7 @@
 
 <head>
 
-<meta name="google-site-verification" content="nUWQDitNhNyFV8ESCNHtladA426cAy_Bod6ds6DeJcM" />
+<meta name="google-site-verification" content="nUWQDitNhNyFV8ESCNHtladA426cAy_Bod6ds6DeJcM">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -331,6 +331,46 @@ color:#16801d;
 margin:18px 0;
 }
 
+.customer-form{
+background:#f5f8f6;
+padding:18px;
+border-radius:10px;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+.customer-form h3{
+margin-bottom:15px;
+color:#003f32;
+}
+
+.customer-form label{
+display:block;
+font-weight:bold;
+margin:10px 0 5px;
+}
+
+.customer-form input,
+.customer-form textarea{
+width:100%;
+padding:13px;
+border:1px solid #ccc;
+border-radius:7px;
+font-size:16px;
+outline:none;
+font-family:Arial,sans-serif;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus{
+border-color:#16801d;
+}
+
+.customer-form textarea{
+min-height:90px;
+resize:vertical;
+}
+
 .whatsapp-order{
 border:0;
 background:#25D366;
@@ -439,6 +479,10 @@ font-size:13px;
 font-size:14px;
 }
 
+.clear{
+margin-left:4px;
+}
+
 }
 
 </style>
@@ -446,9 +490,6 @@ font-size:14px;
 </head>
 
 <body>
-
-
-<!-- TOP BAR -->
 
 <div class="top">
 
@@ -461,8 +502,6 @@ font-size:14px;
 </div>
 
 
-<!-- HEADER -->
-
 <header class="header">
 
 <div class="logo">
@@ -473,7 +512,6 @@ font-size:14px;
 
 </div>
 
-
 <div class="search">
 
 <input
@@ -481,10 +519,9 @@ id="search"
 placeholder="Search ration/product..."
 oninput="searchProducts()">
 
-<button type="button">🔍</button>
+<button type="button" onclick="searchProducts()">🔍</button>
 
 </div>
-
 
 <div class="wa">
 
@@ -496,8 +533,6 @@ Order on WhatsApp<br>
 
 </header>
 
-
-<!-- NAVIGATION -->
 
 <nav class="nav">
 
@@ -527,8 +562,6 @@ Order on WhatsApp<br>
 <main id="home">
 
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div>
@@ -541,14 +574,12 @@ B.S INSAF<br>
 
 </h1>
 
-
 <p>
 
 Har Ghar Ki Zaroorat, Ek Hi Dukaan Par —
 Ration, groceries aur daily-use products.
 
 </p>
-
 
 <a
 class="btn"
@@ -583,8 +614,6 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 </section>
 
 
-<!-- CATEGORIES -->
-
 <section id="categories">
 
 <div class="title">
@@ -602,17 +631,11 @@ May this blessed month bring peace, happiness and prosperity to you and your fam
 <div class="card category-card"
 onclick="showCategory('Groceries')">
 
-<div class="pic">
-🌾
-</div>
+<div class="pic">🌾</div>
 
-<h3>
-Groceries
-</h3>
+<h3>Groceries</h3>
 
-<p>
-Rice, pulses, flour & sugar
-</p>
+<p>Rice, pulses, flour & sugar</p>
 
 </div>
 
@@ -620,17 +643,11 @@ Rice, pulses, flour & sugar
 <div class="card category-card"
 onclick="showCategory('Oil')">
 
-<div class="pic">
-🫗
-</div>
+<div class="pic">🫗</div>
 
-<h3>
-Oil & Ghee
-</h3>
+<h3>Oil & Ghee</h3>
 
-<p>
-Cooking oil & ghee
-</p>
+<p>Cooking oil & ghee</p>
 
 </div>
 
@@ -638,17 +655,11 @@ Cooking oil & ghee
 <div class="card category-card"
 onclick="showCategory('Tea')">
 
-<div class="pic">
-☕
-</div>
+<div class="pic">☕</div>
 
-<h3>
-Tea & Coffee
-</h3>
+<h3>Tea & Coffee</h3>
 
-<p>
-Tea, coffee & drinks
-</p>
+<p>Tea, coffee & drinks</p>
 
 </div>
 
@@ -656,17 +667,11 @@ Tea, coffee & drinks
 <div class="card category-card"
 onclick="showCategory('Snacks')">
 
-<div class="pic">
-🍪
-</div>
+<div class="pic">🍪</div>
 
-<h3>
-Snacks
-</h3>
+<h3>Snacks</h3>
 
-<p>
-Biscuits & snacks
-</p>
+<p>Biscuits & snacks</p>
 
 </div>
 
@@ -674,17 +679,11 @@ Biscuits & snacks
 <div class="card category-card"
 onclick="showCategory('Personal')">
 
-<div class="pic">
-🧴
-</div>
+<div class="pic">🧴</div>
 
-<h3>
-Personal Care
-</h3>
+<h3>Personal Care</h3>
 
-<p>
-Soap, shampoo & care
-</p>
+<p>Soap, shampoo & care</p>
 
 </div>
 
@@ -692,17 +691,11 @@ Soap, shampoo & care
 <div class="card category-card"
 onclick="showCategory('Household')">
 
-<div class="pic">
-🧹
-</div>
+<div class="pic">🧹</div>
 
-<h3>
-Household
-</h3>
+<h3>Household</h3>
 
-<p>
-Cleaning & home needs
-</p>
+<p>Cleaning & home needs</p>
 
 </div>
 
@@ -710,17 +703,11 @@ Cleaning & home needs
 <div class="card category-card"
 onclick="showCategory('Baby')">
 
-<div class="pic">
-👶
-</div>
+<div class="pic">👶</div>
 
-<h3>
-Baby Care
-</h3>
+<h3>Baby Care</h3>
 
-<p>
-Baby essentials
-</p>
+<p>Baby essentials</p>
 
 </div>
 
@@ -728,27 +715,18 @@ Baby essentials
 <div class="card category-card"
 onclick="showCategory('More')">
 
-<div class="pic">
-🛍️
-</div>
+<div class="pic">🛍️</div>
 
-<h3>
-More Items
-</h3>
+<h3>More Items</h3>
 
-<p>
-Daily-use products
-</p>
+<p>Daily-use products</p>
 
 </div>
-
 
 </div>
 
 </section>
 
-
-<!-- PRODUCTS -->
 
 <section id="products" class="products">
 
@@ -774,51 +752,25 @@ onclick="showAllProducts()">
 <div id="productGrid" class="grid">
 
 
-<!-- GROCERIES -->
-
+<!-- PRODUCTS -->
 
 <div class="card product"
 data-category="Groceries"
 data-name="Basmati Rice"
 data-price="350">
 
-<div class="pic">
-🍚
-</div>
-
-<h3>
-Basmati Rice
-</h3>
-
-<div class="price">
-Rs. 350 / kg
-</div>
+<div class="pic">🍚</div>
+<h3>Basmati Rice</h3>
+<div class="price">Rs. 350 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">
-−
-</button>
-
-<span>
-0
-</span>
-
-<button type="button"
-onclick="changeQty(this,1)">
-+
-</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
+<span>0</span>
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button
-class="order"
-type="button"
-onclick="addToCart(this)">
-
+<button class="order" type="button" onclick="addToCart(this)">
 Add to Bill
-
 </button>
 
 </div>
@@ -830,30 +782,16 @@ data-name="Sella Rice"
 data-price="320">
 
 <div class="pic">🍚</div>
-
 <h3>Sella Rice</h3>
-
-<div class="price">
-Rs. 320 / kg
-</div>
+<div class="price">Rs. 320 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -864,30 +802,16 @@ data-name="Atta"
 data-price="150">
 
 <div class="pic">🌾</div>
-
 <h3>Atta</h3>
-
-<div class="price">
-Rs. 150 / kg
-</div>
+<div class="price">Rs. 150 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -898,30 +822,16 @@ data-name="Sugar"
 data-price="180">
 
 <div class="pic">🍚</div>
-
 <h3>Sugar</h3>
-
-<div class="price">
-Rs. 180 / kg
-</div>
+<div class="price">Rs. 180 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -932,30 +842,16 @@ data-name="Daal Chana"
 data-price="280">
 
 <div class="pic">🫘</div>
-
 <h3>Daal Chana</h3>
-
-<div class="price">
-Rs. 280 / kg
-</div>
+<div class="price">Rs. 280 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -966,35 +862,18 @@ data-name="Daal Masoor"
 data-price="300">
 
 <div class="pic">🫘</div>
-
 <h3>Daal Masoor</h3>
-
-<div class="price">
-Rs. 300 / kg
-</div>
+<div class="price">Rs. 300 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- OIL -->
 
 
 <div class="card product"
@@ -1003,30 +882,16 @@ data-name="Cooking Oil"
 data-price="550">
 
 <div class="pic">🫗</div>
-
 <h3>Cooking Oil</h3>
-
-<div class="price">
-Rs. 550 / litre
-</div>
+<div class="price">Rs. 550 / litre</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1037,30 +902,16 @@ data-name="Banaspati Ghee"
 data-price="600">
 
 <div class="pic">🧈</div>
-
 <h3>Banaspati Ghee</h3>
-
-<div class="price">
-Rs. 600 / kg
-</div>
+<div class="price">Rs. 600 / kg</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1071,35 +922,18 @@ data-name="Canola Oil"
 data-price="650">
 
 <div class="pic">🫗</div>
-
 <h3>Canola Oil</h3>
-
-<div class="price">
-Rs. 650 / litre
-</div>
+<div class="price">Rs. 650 / litre</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- TEA -->
 
 
 <div class="card product"
@@ -1108,30 +942,16 @@ data-name="Tea"
 data-price="450">
 
 <div class="pic">☕</div>
-
 <h3>Tea</h3>
-
-<div class="price">
-Rs. 450 / pack
-</div>
+<div class="price">Rs. 450 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1142,35 +962,18 @@ data-name="Coffee"
 data-price="500">
 
 <div class="pic">☕</div>
-
 <h3>Coffee</h3>
-
-<div class="price">
-Rs. 500 / pack
-</div>
+<div class="price">Rs. 500 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- SNACKS -->
 
 
 <div class="card product"
@@ -1179,30 +982,16 @@ data-name="Biscuits"
 data-price="50">
 
 <div class="pic">🍪</div>
-
 <h3>Biscuits</h3>
-
-<div class="price">
-Rs. 50 / pack
-</div>
+<div class="price">Rs. 50 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1213,35 +1002,18 @@ data-name="Chips"
 data-price="50">
 
 <div class="pic">🥔</div>
-
 <h3>Chips</h3>
-
-<div class="price">
-Rs. 50 / pack
-</div>
+<div class="price">Rs. 50 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- PERSONAL -->
 
 
 <div class="card product"
@@ -1250,30 +1022,16 @@ data-name="Shampoo"
 data-price="250">
 
 <div class="pic">🧴</div>
-
 <h3>Shampoo</h3>
-
-<div class="price">
-Rs. 250 / bottle
-</div>
+<div class="price">Rs. 250 / bottle</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1284,35 +1042,18 @@ data-name="Soap"
 data-price="120">
 
 <div class="pic">🧼</div>
-
 <h3>Soap</h3>
-
-<div class="price">
-Rs. 120 / piece
-</div>
+<div class="price">Rs. 120 / piece</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- HOUSEHOLD -->
 
 
 <div class="card product"
@@ -1321,30 +1062,16 @@ data-name="Laundry Powder"
 data-price="300">
 
 <div class="pic">🧼</div>
-
 <h3>Laundry Powder</h3>
-
-<div class="price">
-Rs. 300 / pack
-</div>
+<div class="price">Rs. 300 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1355,35 +1082,18 @@ data-name="Dish Wash"
 data-price="200">
 
 <div class="pic">🧽</div>
-
 <h3>Dish Wash</h3>
-
-<div class="price">
-Rs. 200 / bottle
-</div>
+<div class="price">Rs. 200 / bottle</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- BABY -->
 
 
 <div class="card product"
@@ -1392,30 +1102,16 @@ data-name="Baby Diapers"
 data-price="800">
 
 <div class="pic">👶</div>
-
 <h3>Baby Diapers</h3>
-
-<div class="price">
-Rs. 800 / pack
-</div>
+<div class="price">Rs. 800 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1426,35 +1122,18 @@ data-name="Baby Soap"
 data-price="180">
 
 <div class="pic">🧼</div>
-
 <h3>Baby Soap</h3>
-
-<div class="price">
-Rs. 180 / piece
-</div>
+<div class="price">Rs. 180 / piece</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
-
-
-<!-- MORE -->
 
 
 <div class="card product"
@@ -1463,30 +1142,16 @@ data-name="Salt"
 data-price="60">
 
 <div class="pic">🧂</div>
-
 <h3>Salt</h3>
-
-<div class="price">
-Rs. 60 / pack
-</div>
+<div class="price">Rs. 60 / pack</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1497,30 +1162,16 @@ data-name="Match Box"
 data-price="20">
 
 <div class="pic">🔥</div>
-
 <h3>Match Box</h3>
-
-<div class="price">
-Rs. 20 / box
-</div>
+<div class="price">Rs. 20 / box</div>
 
 <div class="quantity">
-
-<button type="button"
-onclick="changeQty(this,-1)">−</button>
-
+<button type="button" onclick="changeQty(this,-1)">−</button>
 <span>0</span>
-
-<button type="button"
-onclick="changeQty(this,1)">+</button>
-
+<button type="button" onclick="changeQty(this,1)">+</button>
 </div>
 
-<button class="order"
-type="button"
-onclick="addToCart(this)">
-Add to Bill
-</button>
+<button class="order" onclick="addToCart(this)">Add to Bill</button>
 
 </div>
 
@@ -1530,22 +1181,16 @@ Add to Bill
 </section>
 
 
-<!-- BILL -->
-
 <section id="cart">
 
 <div class="cart">
 
-<h2>
-🧾 My Bill / Cart
-</h2>
+<h2>🧾 My Bill / Cart</h2>
 
 
 <div id="cartItems">
 
-<p>
-No products added yet.
-</p>
+<p>No products added yet.</p>
 
 </div>
 
@@ -1554,6 +1199,43 @@ No products added yet.
 
 Total: Rs.
 <span id="cartTotal">0</span>
+
+</div>
+
+
+<!-- CUSTOMER DETAILS -->
+
+<div class="customer-form">
+
+<h3>👤 Customer Details</h3>
+
+<label for="customerName">
+Customer Name
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Apna naam likhein">
+
+
+<label for="customerPhone">
+Phone Number
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="03XXXXXXXXX">
+
+
+<label for="customerAddress">
+Delivery Address
+</label>
+
+<textarea
+id="customerAddress"
+placeholder="Apna complete address likhein"></textarea>
 
 </div>
 
@@ -1582,8 +1264,6 @@ Clear Bill
 </section>
 
 
-<!-- CONTACT -->
-
 <section id="contact" class="contact">
 
 <h2>
@@ -1595,7 +1275,6 @@ Easy • Safe • Reliable
 </p>
 
 <br>
-
 
 <a
 class="btn"
@@ -1612,16 +1291,11 @@ target="_blank">
 </main>
 
 
-<!-- FOOTER -->
-
 <footer class="footer">
-
 
 <div>
 
-<h3>
-B.S INSAF GENERAL STORE
-</h3>
+<h3>B.S INSAF GENERAL STORE</h3>
 
 <p>
 Daily ration, groceries and household products
@@ -1633,68 +1307,41 @@ at reasonable prices.
 
 <div>
 
-<h3>
-Quick Links
-</h3>
+<h3>Quick Links</h3>
+
+<p><a href="#home">Home</a></p>
 
 <p>
-<a href="#home">Home</a>
-</p>
-
-<p>
-<a href="#products"
-onclick="showAllProducts()">
+<a href="#products" onclick="showAllProducts()">
 All Products
 </a>
 </p>
 
-<p>
-<a href="#categories">
-Categories
-</a>
-</p>
+<p><a href="#categories">Categories</a></p>
 
-<p>
-<a href="#cart">
-My Bill
-</a>
-</p>
+<p><a href="#cart">My Bill</a></p>
 
-<p>
-<a href="#contact">
-Contact
-</a>
-</p>
+<p><a href="#contact">Contact</a></p>
 
 </div>
 
 
 <div>
 
-<h3>
-Contact Us
-</h3>
+<h3>Contact Us</h3>
 
-<p>
-📞 03111263960
-</p>
+<p>📞 03111263960</p>
 
-<p>
-🟢 WhatsApp: 03111263960
-</p>
+<p>🟢 WhatsApp: 03111263960</p>
 
-<p>
-📍 Your City, Pakistan
-</p>
+<p>📍 Your City, Pakistan</p>
 
 </div>
 
 
 <div>
 
-<h3>
-Follow Us
-</h3>
+<h3>Follow Us</h3>
 
 <p>
 Facebook • WhatsApp • TikTok • YouTube
@@ -1702,320 +1349,9 @@ Facebook • WhatsApp • TikTok • YouTube
 
 </div>
 
-
 </footer>
 
 
 <div class="copy">
 
-© 2026 B.S Insaf General Store.
-All Rights Reserved.
-
-</div>
-
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-let cart = [];
-
-/* PLUS / MINUS */
-function changeQty(button, change) {
-
-    const span = button.parentElement.querySelector("span");
-
-    let qty = Number(span.textContent.trim());
-
-    if (isNaN(qty)) {
-        qty = 0;
-    }
-
-    qty += change;
-
-    if (qty < 0) {
-        qty = 0;
-    }
-
-    span.textContent = qty;
-}
-
-
-/* ADD TO BILL */
-function addToCart(button) {
-
-    const card = button.closest(".product");
-
-    if (!card) return;
-
-    const name = card.getAttribute("data-name");
-    const price = Number(card.getAttribute("data-price")) || 0;
-
-    const span = card.querySelector(".quantity span");
-
-    let qty = Number(span.textContent.trim());
-
-    if (isNaN(qty)) {
-        qty = 0;
-    }
-
-    if (qty <= 0) {
-        alert("Pehle + button se quantity select karein.");
-        return;
-    }
-
-    const existing = cart.find(item => item.name === name);
-
-    if (existing) {
-        existing.qty += qty;
-    } else {
-        cart.push({
-            name: name,
-            price: price,
-            qty: qty
-        });
-    }
-
-    span.textContent = "0";
-
-    updateCart();
-
-    document.getElementById("cart").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-
-/* UPDATE BILL */
-function updateCart() {
-
-    const box = document.getElementById("cartItems");
-    const totalBox = document.getElementById("cartTotal");
-
-    let total = 0;
-
-    if (cart.length === 0) {
-
-        box.innerHTML = "<p>No products added yet.</p>";
-        totalBox.textContent = "0";
-        return;
-    }
-
-    box.innerHTML = "";
-
-    cart.forEach((item, index) => {
-
-        const amount = item.price * item.qty;
-
-        total += amount;
-
-        const div = document.createElement("div");
-
-        div.className = "cart-item";
-
-        div.innerHTML = `
-            <div>
-                <strong>${item.name}</strong><br>
-                Rs. ${item.price} × ${item.qty}
-                = Rs. ${amount}
-            </div>
-
-            <button type="button"
-                    onclick="removeItem(${index})">
-                Remove
-            </button>
-        `;
-
-        box.appendChild(div);
-    });
-
-    totalBox.textContent = total;
-}
-
-
-/* REMOVE */
-function removeItem(index) {
-
-    cart.splice(index, 1);
-
-    updateCart();
-}
-
-
-/* CLEAR */
-function clearCart() {
-
-    cart = [];
-
-    updateCart();
-}
-
-
-/* SEARCH */
-function searchProducts() {
-
-    const input = document.getElementById("search");
-
-    if (!input) return;
-
-    const search = input.value.toLowerCase().trim();
-
-    const products = document.querySelectorAll(".product");
-
-    let found = 0;
-
-    products.forEach(product => {
-
-        const name =
-            (product.getAttribute("data-name") || "")
-            .toLowerCase();
-
-        if (search === "" || name.includes(search)) {
-
-            product.style.display = "";
-
-            found++;
-
-        } else {
-
-            product.style.display = "none";
-        }
-    });
-
-    const title = document.getElementById("productTitle");
-
-    if (search === "") {
-
-        title.textContent = "Popular Products";
-
-    } else {
-
-        title.textContent = "Search Results";
-
-        if (found === 0) {
-            title.textContent = "No Product Found";
-        }
-    }
-
-    document.getElementById("backButton").style.display =
-        search ? "block" : "none";
-}
-
-
-/* CATEGORY */
-function showCategory(category) {
-
-    const products = document.querySelectorAll(".product");
-
-    products.forEach(product => {
-
-        if (product.getAttribute("data-category") === category) {
-
-            product.style.display = "";
-
-        } else {
-
-            product.style.display = "none";
-        }
-    });
-
-    document.getElementById("productTitle").textContent =
-        category === "Oil" ? "Oil & Ghee" : category;
-
-    document.getElementById("backButton").style.display = "block";
-
-    document.getElementById("products").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-
-/* ALL PRODUCTS */
-function showAllProducts() {
-
-    document.querySelectorAll(".product").forEach(product => {
-        product.style.display = "";
-    });
-
-    document.getElementById("productTitle").textContent =
-        "Popular Products";
-
-    document.getElementById("backButton").style.display = "none";
-
-    document.getElementById("search").value = "";
-}
-
-
-/* WHATSAPP */
-function sendOrder() {
-
-    if (cart.length === 0) {
-
-        alert("Your bill is empty.");
-        return;
-    }
-
-    let message =
-        "Assalam o Alaikum,%0A" +
-        "B.S Insaf General Store - My Order%0A%0A";
-
-    let total = 0;
-
-    cart.forEach(item => {
-
-        const amount = item.price * item.qty;
-
-        total += amount;
-
-        message +=
-            item.name +
-            " - " +
-            item.qty +
-            " × Rs. " +
-            item.price +
-            " = Rs. " +
-            amount +
-            "%0A";
-    });
-
-    message +=
-        "%0ATotal Bill: Rs. " +
-        total +
-        "%0A%0AThank you.";
-
-    const whatsapp =
-        "https://wa.me/923111263960?text=" + message;
-
-    window.open(whatsapp, "_blank");
-}
-
-
-/* START */
-document.addEventListener("DOMContentLoaded", function () {
-
-    updateCart();
-
-    const searchBox = document.getElementById("search");
-
-    if (searchBox) {
-
-        searchBox.addEventListener("input", searchProducts);
-
-        searchBox.addEventListener("keyup", searchProducts);
-    }
-
-});
-
-</script>
-
-let cart = [];
-
-
-/* =========================
-   PLUS / MINUS
-========================= */
-
-function changeQty(button, change){
-
-    let span =
-   
+© 2026 B.S In
