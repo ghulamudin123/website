@@ -1,110 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>B.S Insaf General Store</title>
 
-<meta name="description"
-content="B.S Insaf General Store - Grocery Store">
-
 <style>
-
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 body{
+    margin:0;
     font-family:Arial,sans-serif;
-    background:#f3f7f5;
+    background:#f3f4f6;
     color:#222;
 }
 
-/* ================= BACKGROUND BUTTON ================= */
-
-.background-tools{
-    background:white;
-    padding:10px;
-    text-align:center;
-    border-bottom:1px solid #ddd;
-}
-
-.bg-button{
-    display:inline-block;
-    background:#006b55;
-    color:white;
-    padding:11px 18px;
-    border-radius:9px;
-    font-weight:bold;
-    cursor:pointer;
-    margin:3px;
-}
-
-.remove-bg{
-    background:#d32f2f;
-}
-
-#backgroundInput{
-    display:none;
-}
-
-/* ================= HEADER ================= */
-
 header{
-
-    min-height:250px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
+    background:#087f5b;
     color:white;
-
-    background:
-    linear-gradient(
-        rgba(0,63,50,.55),
-        rgba(0,63,50,.65)
-    ),
-    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85");
-
-    background-size:cover;
-    background-position:center;
-
-    transition:.3s;
-}
-
-.header-content{
-    padding:30px 15px;
-}
-
-.shop-badge{
-    display:inline-block;
-    background:white;
-    color:#006b55;
-    padding:8px 16px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:12px;
+    text-align:center;
+    padding:18px 10px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 header h1{
-    font-size:31px;
-    margin-bottom:8px;
-    text-shadow:0 2px 5px #000;
+    margin:0;
+    font-size:25px;
 }
 
 header p{
-    font-size:16px;
-    text-shadow:0 2px 4px #000;
+    margin:6px 0 0;
+    font-size:14px;
 }
 
-/* ================= CONTAINER ================= */
+.search-box{
+    padding:12px;
+    background:white;
+    position:sticky;
+    top:78px;
+    z-index:90;
+}
+
+#search{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
 
 .container{
     max-width:1100px;
@@ -112,1571 +60,957 @@ header p{
     padding:15px;
 }
 
-/* ================= SEARCH ================= */
-
-.search-box{
+.section-title{
+    text-align:center;
     margin:15px 0;
+    font-size:22px;
 }
-
-.search-box input{
-    width:100%;
-    padding:14px;
-    border:2px solid #006b55;
-    border-radius:10px;
-    font-size:16px;
-    outline:none;
-}
-
-/* ================= CATEGORIES ================= */
 
 .categories{
-    display:flex;
-    gap:8px;
-    overflow-x:auto;
-    padding-bottom:10px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
-.category-btn{
-    border:none;
-    background:#ddd;
-    padding:10px 15px;
-    border-radius:20px;
-    white-space:nowrap;
+.category-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 10px #0002;
     cursor:pointer;
+    transition:.2s;
+}
+
+.category-card:hover{
+    transform:translateY(-3px);
+}
+
+.category-card img{
+    width:100%;
+    height:145px;
+    object-fit:cover;
+    display:block;
+}
+
+.category-name{
+    text-align:center;
+    padding:12px 5px;
+    font-size:18px;
     font-weight:bold;
 }
 
-.category-btn.active{
-    background:#006b55;
-    color:white;
+.products-section{
+    display:none;
 }
 
-/* ================= PRODUCTS ================= */
+.back-btn{
+    background:#555;
+    color:white;
+    border:0;
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:15px;
+    cursor:pointer;
+    margin-bottom:12px;
+}
 
 .products{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fill,minmax(170px,1fr));
-
-    gap:15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
 .product{
     background:white;
-    border-radius:14px;
-    padding:10px;
-
-    box-shadow:
-    0 2px 8px rgba(0,0,0,.12);
-
-    text-align:center;
-}
-
-/* PRODUCT IMAGE */
-
-.product-image{
-    width:100%;
-    height:140px;
-
-    border-radius:10px;
-
+    border-radius:13px;
     overflow:hidden;
-
-    background:#e8f3ef;
-
-    margin-bottom:10px;
+    box-shadow:0 3px 10px #0002;
 }
 
-.product-image img{
+.product img{
     width:100%;
-    height:100%;
+    height:130px;
     object-fit:cover;
 }
 
-.product h3{
-    font-size:17px;
-    margin-bottom:6px;
+.product-info{
+    padding:10px;
+}
+
+.product-name{
+    font-weight:bold;
+    font-size:16px;
+    min-height:38px;
 }
 
 .price{
-    color:#006b55;
+    color:#087f5b;
+    font-weight:bold;
+    font-size:17px;
+    margin:5px 0;
+}
+
+.qty{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-top:8px;
+}
+
+.qty button{
+    width:35px;
+    height:35px;
+    border:0;
+    border-radius:8px;
+    background:#087f5b;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.qty span{
     font-size:18px;
     font-weight:bold;
-    margin-bottom:8px;
+    min-width:25px;
+    text-align:center;
 }
-
-/* ================= PLUS MINUS ================= */
-
-.quantity{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:10px;
-
-    margin:8px 0;
-}
-
-.qty-btn{
-
-    width:40px;
-    height:40px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#006b55;
-    color:white;
-
-    font-size:25px;
-    font-weight:bold;
-
-    cursor:pointer;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.qty-btn:active{
-    transform:scale(.9);
-}
-
-.qty-number{
-    min-width:35px;
-    font-size:19px;
-    font-weight:bold;
-}
-
-/* ================= ADD BUTTON ================= */
-
-.add-btn{
-
-    width:100%;
-
-    border:none;
-
-    padding:11px;
-
-    border-radius:8px;
-
-    background:#ff9800;
-
-    color:white;
-
-    font-weight:bold;
-
-    font-size:15px;
-
-    cursor:pointer;
-}
-
-/* ================= CART ================= */
 
 .cart{
-
     background:white;
-
-    margin-top:25px;
-
-    padding:18px;
-
+    margin-top:20px;
     border-radius:15px;
-
-    box-shadow:
-    0 2px 10px rgba(0,0,0,.12);
+    padding:15px;
+    box-shadow:0 3px 10px #0002;
 }
 
 .cart h2{
-    color:#003f32;
-    margin-bottom:15px;
+    margin-top:0;
 }
 
 .cart-item{
-
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
-    gap:8px;
-
-    padding:12px 0;
-
     border-bottom:1px solid #ddd;
+    padding:9px 0;
+    gap:8px;
 }
 
-.cart-name{
-    flex:1;
+.total{
+    font-size:21px;
     font-weight:bold;
-}
-
-.cart-controls{
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
-
-.small-btn{
-
-    width:32px;
-    height:32px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#006b55;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-}
-
-.cart-total{
-
     text-align:right;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    color:#003f32;
-
-    padding:15px 0;
+    margin-top:12px;
+    color:#087f5b;
 }
 
-.empty{
-
-    text-align:center;
-
-    padding:20px;
-
-    color:#777;
-}
-
-/* ================= CUSTOMER FORM ================= */
-
-.customer-form{
+.customer{
     margin-top:15px;
 }
 
-.customer-form input,
-.customer-form textarea{
-
+.customer input,
+.customer textarea{
     width:100%;
-
-    padding:13px;
-
-    margin-bottom:10px;
-
-    border:1px solid #bbb;
-
+    padding:12px;
+    margin:6px 0;
+    border:1px solid #ccc;
     border-radius:8px;
-
     font-size:15px;
 }
 
-.customer-form textarea{
-    min-height:90px;
-    resize:vertical;
+.customer textarea{
+    height:80px;
+    resize:none;
 }
-
-/* ================= WHATSAPP ================= */
 
 .order-btn{
-
     width:100%;
-
-    background:#25D366;
-
-    color:white;
-
-    border:none;
-
     padding:14px;
-
-    border-radius:9px;
-
-    font-size:17px;
-
+    border:0;
+    border-radius:10px;
+    background:#25D366;
+    color:white;
+    font-size:18px;
     font-weight:bold;
-
     cursor:pointer;
+    margin-top:8px;
 }
-
-/* ================= CLEAR ================= */
 
 .clear-btn{
-
     width:100%;
-
-    margin-top:10px;
-
-    background:#d32f2f;
-
+    padding:11px;
+    border:0;
+    border-radius:10px;
+    background:#dc3545;
     color:white;
-
-    border:none;
-
-    padding:12px;
-
-    border-radius:9px;
-
-    font-size:16px;
-
+    font-size:15px;
     cursor:pointer;
+    margin-top:8px;
 }
 
-/* ================= NO RESULT ================= */
-
-.no-result{
-
+.empty{
     text-align:center;
-
-    padding:30px;
-
-    display:none;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-    margin-top:30px;
-
-    background:#003f32;
-
-    color:white;
-
-    text-align:center;
-
+    color:#777;
     padding:20px;
-
 }
 
-/* ================= MOBILE ================= */
-
-@media(max-width:500px){
-
-    header{
-        min-height:220px;
-    }
-
-    header h1{
-        font-size:25px;
+@media(min-width:700px){
+    .categories{
+        grid-template-columns:repeat(4,1fr);
     }
 
     .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
+        grid-template-columns:repeat(4,1fr);
     }
-
-    .product{
-        padding:8px;
-    }
-
-    .product-image{
-        height:105px;
-    }
-
-    .product h3{
-        font-size:15px;
-    }
-
-    .price{
-        font-size:16px;
-    }
-
-    .qty-btn{
-        width:36px;
-        height:36px;
-        font-size:22px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-
-<!-- =================================================
-     BACKGROUND CONTROLS
-================================================= -->
-
-<div class="background-tools">
-
-    <label
-        class="bg-button"
-        for="backgroundInput">
-
-        🖼️ Choose Shop Background
-
-    </label>
-
-    <button
-        class="bg-button remove-bg"
-        onclick="removeBackground()">
-
-        ❌ Remove Background
-
-    </button>
-
-    <input
-        type="file"
-        id="backgroundInput"
-        accept="image/*">
-
-</div>
-
-
-<!-- =================================================
-     HEADER
-================================================= -->
-
-<header id="shopHeader">
-
-    <div class="header-content">
-
-        <div class="shop-badge">
-            🛒 Grocery Store
-        </div>
-
-        <h1>
-            B.S Insaf General Store
-        </h1>
-
-        <p>
-            Grocery • Daily Needs • Home Delivery
-        </p>
-
-    </div>
-
+<header>
+    <h1>🛒 B.S Insaf General Store</h1>
+    <p>آپ کی روزمرہ ضرورت کی تمام اشیاء</p>
 </header>
 
+<div class="search-box">
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 سامان تلاش کریں..."
+        oninput="searchProducts()"
+    >
+</div>
 
 <div class="container">
 
+    <!-- CATEGORIES -->
+    <div id="categorySection">
 
-<!-- =================================================
-     SEARCH
-================================================= -->
+        <h2 class="section-title">📦 Categories</h2>
 
-<div class="search-box">
-
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="🔍 Search saman..."
-        oninput="renderProducts()">
-
-</div>
-
-
-<!-- =================================================
-     CATEGORIES
-================================================= -->
-
-<div
-    class="categories"
-    id="categories">
-</div>
-
-
-<!-- =================================================
-     PRODUCTS
-================================================= -->
-
-<div
-    class="products"
-    id="products">
-</div>
-
-
-<div
-    class="no-result"
-    id="noResult">
-
-    <h3>
-        Saman nahi mila
-    </h3>
-
-</div>
-
-
-<!-- =================================================
-     CART
-================================================= -->
-
-<div class="cart">
-
-    <h2>
-        🛒 Your Cart
-    </h2>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-total">
-
-        Total:
-        <span id="cartTotal">
-            Rs. 0
-        </span>
+        <div class="categories" id="categories"></div>
 
     </div>
 
 
-    <!-- CUSTOMER -->
+    <!-- PRODUCTS -->
+    <div class="products-section" id="productsSection">
 
-    <div class="customer-form">
-
-        <input
-            type="text"
-            id="customerName"
-            placeholder="Customer Name">
-
-        <input
-            type="tel"
-            id="customerPhone"
-            placeholder="Phone Number">
-
-        <textarea
-            id="customerAddress"
-            placeholder="Customer Address"></textarea>
-
-
-        <button
-            class="order-btn"
-            onclick="orderWhatsApp()">
-
-            📲 Order on WhatsApp
-
+        <button class="back-btn" onclick="showCategories()">
+            ← واپس Categories
         </button>
 
+        <h2 class="section-title" id="categoryTitle"></h2>
 
-        <button
-            class="clear-btn"
-            onclick="clearCart()">
+        <div class="products" id="products"></div>
 
-            🗑 Clear Cart
+    </div>
 
-        </button>
+
+    <!-- CART -->
+    <div class="cart">
+
+        <h2>🛒 آپ کا Cart</h2>
+
+        <div id="cartItems">
+            <div class="empty">ابھی Cart خالی ہے</div>
+        </div>
+
+        <div class="total">
+            Total: Rs. <span id="total">0</span>
+        </div>
+
+        <div class="customer">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Customer Name"
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Phone Number"
+            >
+
+            <textarea
+                id="customerAddress"
+                placeholder="Customer Address"
+            ></textarea>
+
+            <button class="order-btn" onclick="sendWhatsApp()">
+                📱 WhatsApp پر Order بھیجیں
+            </button>
+
+            <button class="clear-btn" onclick="clearCart()">
+                🗑️ Cart صاف کریں
+            </button>
+
+        </div>
 
     </div>
 
 </div>
-
-</div>
-
-
-<footer>
-
-    © 2026 B.S Insaf General Store
-
-</footer>
 
 
 <script>
 
-/* =================================================
-   WHATSAPP NUMBER
-================================================= */
-
 /*
-   YAHAN APNA WHATSAPP NUMBER LIKHEIN.
+====================================================
+        یہاں سے آپ نیا سامان ADD کریں گے
+====================================================
 
-   Example:
-   03111263960
+ہر category کے اندر جتنی مرضی چیزیں ڈال سکتے ہیں۔
 
-   + sign NAHI lagana.
-*/
+name  = سامان کا نام
+price = قیمت
+image = تصویر کا URL
 
-const SHOP_WHATSAPP = "03111263960";
-
-
-/* =================================================
-   PRODUCTS
-================================================= */
-
-const products = [
+مثال:
 
 {
-    id:1,
-    name:"Sugar",
-    price:50,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:2,
-    name:"Rice",
-    price:200,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:3,
-    name:"Flour",
-    price:150,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:4,
-    name:"Cooking Oil",
-    price:550,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:5,
-    name:"Tea",
-    price:300,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:6,
-    name:"Salt",
-    price:50,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1518110925495-5fe2a1f6c8f0?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:7,
-    name:"Lentils",
-    price:250,
-    category:"Grocery",
-    image:
-    "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:8,
-    name:"Milk",
-    price:200,
-    category:"Dairy",
-    image:
-    "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:9,
-    name:"Bread",
-    price:120,
-    category:"Bakery",
-    image:
-    "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:10,
-    name:"Eggs",
-    price:300,
-    category:"Dairy",
-    image:
-    "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:11,
-    name:"Biscuits",
-    price:80,
-    category:"Snacks",
-    image:
-    "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:12,
-    name:"Chips",
+    name:"نیا سامان",
     price:100,
-    category:"Snacks",
-    image:
-    "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:13,
-    name:"Soap",
-    price:120,
-    category:"Household",
-    image:
-    "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:14,
-    name:"Shampoo",
-    price:250,
-    category:"Personal Care",
-    image:
-    "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:15,
-    name:"Toothpaste",
-    price:180,
-    category:"Personal Care",
-    image:
-    "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:16,
-    name:"Detergent",
-    price:300,
-    category:"Household",
-    image:
-    "https://images.unsplash.com/photo-1585832770485-e68a5dbdec03?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:17,
-    name:"Cold Drink",
-    price:150,
-    category:"Drinks",
-    image:
-    "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80"
-},
-
-{
-    id:18,
-    name:"Water Bottle",
-    price:80,
-    category:"Drinks",
-    image:
-    "https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&w=500&q=80"
+    image:"https://..."
 }
 
-];
+====================================================
+*/
 
 
-/* =================================================
-   CART
-================================================= */
+const PRODUCTS = {
+
+    "پتی": {
+
+        image:
+        "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"پتی 10 روپے",
+                price:10,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"پتی 20 روپے",
+                price:20,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"پتی 50 روپے",
+                price:50,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"پتی 100 روپے",
+                price:100,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"پتی آدھا کلو",
+                price:500,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"پتی ایک کلو",
+                price:950,
+                image:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    },
+
+
+    "چینی": {
+
+        image:
+        "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"چینی 1 کلو",
+                price:180,
+                image:"https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"چینی 2 کلو",
+                price:360,
+                image:"https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"چینی 5 کلو",
+                price:900,
+                image:"https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    },
+
+
+    "چاول": {
+
+        image:
+        "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"چاول 1 کلو",
+                price:300,
+                image:"https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"چاول 2 کلو",
+                price:600,
+                image:"https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"چاول 5 کلو",
+                price:1500,
+                image:"https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    },
+
+
+    "دالیں": {
+
+        image:
+        "https://images.unsplash.com/photo-1515543904379-3d757afe72e3?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"مسور دال 1 کلو",
+                price:350,
+                image:"https://images.unsplash.com/photo-1515543904379-3d757afe72e3?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"مونگ دال 1 کلو",
+                price:400,
+                image:"https://images.unsplash.com/photo-1515543904379-3d757afe72e3?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"چنا دال 1 کلو",
+                price:320,
+                image:"https://images.unsplash.com/photo-1515543904379-3d757afe72e3?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    },
+
+
+    "بسکٹ": {
+
+        image:
+        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"بسکٹ پیکٹ 20 روپے",
+                price:20,
+                image:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"بسکٹ پیکٹ 50 روپے",
+                price:50,
+                image:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"بسکٹ پیکٹ 100 روپے",
+                price:100,
+                image:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    },
+
+
+    "صابن": {
+
+        image:
+        "https://images.unsplash.com/photo-1607006344380-b6775a0824c7?auto=format&fit=crop&w=600&q=80",
+
+        items:[
+
+            {
+                name:"صابن 50 روپے",
+                price:50,
+                image:"https://images.unsplash.com/photo-1607006344380-b6775a0824c7?auto=format&fit=crop&w=600&q=80"
+            },
+
+            {
+                name:"صابن 100 روپے",
+                price:100,
+                image:"https://images.unsplash.com/photo-1607006344380-b6775a0824c7?auto=format&fit=crop&w=600&q=80"
+            }
+
+        ]
+    }
+
+};
+
+
+/*
+====================================================
+             باقی SYSTEM
+====================================================
+*/
 
 let cart = {};
 
-let selectedCategory = "All";
+let currentCategory = "";
 
 
-/* =================================================
-   DEFAULT BACKGROUND
-================================================= */
+/* Categories دکھائیں */
 
-const defaultBackground =
-`linear-gradient(
-    rgba(0,63,50,.55),
-    rgba(0,63,50,.65)
-),
-url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85")`;
+function loadCategories(){
 
+    const box = document.getElementById("categories");
 
-/* =================================================
-   CHANGE BACKGROUND
-================================================= */
+    box.innerHTML = "";
 
-document
-.getElementById("backgroundInput")
-.addEventListener(
-    "change",
-    function(event){
+    for(let category in PRODUCTS){
 
-        const file =
-            event.target.files[0];
+        const data = PRODUCTS[category];
 
-        if(!file){
-            return;
-        }
+        box.innerHTML += `
 
-        if(!file.type.startsWith("image/")){
+            <div class="category-card"
+                 onclick="openCategory('${category}')">
 
-            alert(
-                "Please select an image."
-            );
+                <img src="${data.image}"
+                     onerror="this.style.display='none'">
 
-            return;
-        }
+                <div class="category-name">
+                    ${category}
+                </div>
+
+            </div>
+
+        `;
+    }
+}
 
 
-        const reader =
-            new FileReader();
+/* Category کھولیں */
+
+function openCategory(category){
+
+    currentCategory = category;
+
+    document.getElementById("categorySection").style.display="none";
+
+    document.getElementById("productsSection").style.display="block";
+
+    document.getElementById("categoryTitle").innerText =
+        "🛍️ " + category;
+
+    displayProducts(PRODUCTS[category].items);
+}
 
 
-        reader.onload =
-            function(e){
+/* Products دکھائیں */
 
-                const image =
-                    e.target.result;
+function displayProducts(items){
+
+    const box = document.getElementById("products");
+
+    box.innerHTML="";
+
+    if(items.length===0){
+
+        box.innerHTML =
+        '<div class="empty">کوئی سامان نہیں ملا</div>';
+
+        return;
+    }
+
+    items.forEach((item,index)=>{
+
+        const key = currentCategory + "_" + index;
+
+        const quantity = cart[key] ? cart[key].quantity : 0;
+
+        box.innerHTML += `
+
+            <div class="product">
+
+                <img src="${item.image}"
+                     onerror="this.style.display='none'">
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        ${item.name}
+                    </div>
+
+                    <div class="price">
+                        Rs. ${item.price}
+                    </div>
+
+                    <div class="qty">
+
+                        <button
+                            onclick="changeQty('${currentCategory}',${index},-1)">
+                            −
+                        </button>
+
+                        <span id="qty-${key}">
+                            ${quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQty('${currentCategory}',${index},1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+    });
+}
 
 
-                const header =
-                    document.getElementById(
-                        "shopHeader"
-                    );
+/* Quantity */
 
+function changeQty(category,index,change){
 
-                header.style.backgroundImage =
-                    "linear-gradient(" +
-                    "rgba(0,63,50,.45)," +
-                    "rgba(0,63,50,.60)" +
-                    ")," +
-                    "url('" +
-                    image +
-                    "')";
+    const key = category + "_" + index;
 
+    const item = PRODUCTS[category].items[index];
 
-                try{
+    if(!cart[key]){
 
-                    localStorage.setItem(
-                        "BSInsafBackground",
-                        image
-                    );
-
-                }catch(error){
-
-                    alert(
-                        "Image bohat bari hai. " +
-                        "Choti image select karein."
-                    );
-
-                }
-
-            };
-
-
-        reader.readAsDataURL(file);
+        cart[key] = {
+            name:item.name,
+            price:item.price,
+            quantity:0
+        };
 
     }
-);
 
+    cart[key].quantity += change;
 
-/* =================================================
-   LOAD SAVED BACKGROUND
-================================================= */
+    if(cart[key].quantity <= 0){
 
-const savedBackground =
-    localStorage.getItem(
-        "BSInsafBackground"
-    );
+        delete cart[key];
 
+    }
 
-if(savedBackground){
+    displayProducts(PRODUCTS[category].items);
 
-    document.getElementById(
-        "shopHeader"
-    ).style.backgroundImage =
-        "linear-gradient(" +
-        "rgba(0,63,50,.45)," +
-        "rgba(0,63,50,.60)" +
-        ")," +
-        "url('" +
-        savedBackground +
-        "')";
-
+    updateCart();
 }
 
 
-/* =================================================
-   REMOVE BACKGROUND
-================================================= */
+/* Cart */
 
-function removeBackground(){
+function updateCart(){
 
-    localStorage.removeItem(
-        "BSInsafBackground"
-    );
+    const box = document.getElementById("cartItems");
 
+    let total = 0;
 
-    document.getElementById(
-        "shopHeader"
-    ).style.backgroundImage =
-        defaultBackground;
+    box.innerHTML="";
 
+    const keys = Object.keys(cart);
+
+    if(keys.length===0){
+
+        box.innerHTML =
+        '<div class="empty">ابھی Cart خالی ہے</div>';
+
+    }
+
+    keys.forEach(key=>{
+
+        const item = cart[key];
+
+        const subtotal =
+            item.price * item.quantity;
+
+        total += subtotal;
+
+        box.innerHTML += `
+
+            <div class="cart-item">
+
+                <span>
+                    ${item.name}
+                    × ${item.quantity}
+                </span>
+
+                <strong>
+                    Rs. ${subtotal}
+                </strong>
+
+            </div>
+
+        `;
+    });
+
+    document.getElementById("total").innerText = total;
 }
 
 
-/* =================================================
-   PRICE FORMAT
-================================================= */
+/* واپس Categories */
 
-function formatPrice(price){
+function showCategories(){
 
-    return "Rs. " +
-    Number(price).toLocaleString(
-        "en-PK",
-        {
-            maximumFractionDigits:0
-        }
-    );
+    document.getElementById("productsSection").style.display="none";
 
+    document.getElementById("categorySection").style.display="block";
+
+    document.getElementById("search").value="";
+
+    loadCategories();
 }
 
 
-/* =================================================
-   CATEGORIES
-================================================= */
+/* Search */
 
-function renderCategories(){
-
-    const div =
-        document.getElementById(
-            "categories"
-        );
-
-
-    const categories = [
-        "All",
-        ...new Set(
-            products.map(
-                p => p.category
-            )
-        )
-    ];
-
-
-    div.innerHTML = "";
-
-
-    categories.forEach(
-        category => {
-
-            const button =
-                document.createElement(
-                    "button"
-                );
-
-
-            button.className =
-                "category-btn " +
-                (
-                    selectedCategory ===
-                    category
-                    ? "active"
-                    : ""
-                );
-
-
-            button.textContent =
-                category;
-
-
-            button.onclick =
-                function(){
-
-                    selectedCategory =
-                        category;
-
-                    renderCategories();
-
-                    renderProducts();
-
-                };
-
-
-            div.appendChild(button);
-
-        }
-    );
-
-}
-
-
-/* =================================================
-   RENDER PRODUCTS
-================================================= */
-
-function renderProducts(){
-
-    const div =
-        document.getElementById(
-            "products"
-        );
-
+function searchProducts(){
 
     const search =
-        document.getElementById(
-            "searchInput"
-        )
-        .value
+        document.getElementById("search").value
         .toLowerCase()
         .trim();
 
+    if(search===""){
 
-    div.innerHTML = "";
+        showCategories();
 
+        return;
+    }
 
-    let found = 0;
+    document.getElementById("categorySection").style.display="none";
 
+    document.getElementById("productsSection").style.display="block";
 
-    products.forEach(
-        product => {
+    document.getElementById("categoryTitle").innerText =
+        "🔍 Search Result";
 
-            const searchMatch =
-                product.name
-                .toLowerCase()
-                .includes(search);
+    let results=[];
 
+    for(let category in PRODUCTS){
 
-            const categoryMatch =
-                selectedCategory === "All" ||
-                product.category ===
-                selectedCategory;
-
+        PRODUCTS[category].items.forEach((item,index)=>{
 
             if(
-                !searchMatch ||
-                !categoryMatch
+                item.name.toLowerCase().includes(search) ||
+                category.toLowerCase().includes(search)
             ){
-                return;
+
+                results.push({
+                    item:item,
+                    category:category,
+                    index:index
+                });
+
             }
 
+        });
 
-            found++;
+    }
 
+    const box = document.getElementById("products");
 
-            const qty =
-                cart[product.id] || 0;
+    box.innerHTML="";
 
+    results.forEach(result=>{
 
-            const card =
-                document.createElement(
-                    "div"
-                );
+        const item=result.item;
 
+        const key =
+            result.category + "_" + result.index;
 
-            card.className =
-                "product";
+        const quantity =
+            cart[key] ? cart[key].quantity : 0;
 
+        box.innerHTML += `
 
-            card.innerHTML = `
+            <div class="product">
 
-                <div class="product-image">
+                <img src="${item.image}">
 
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                        loading="lazy"
-                        onerror="
-                        this.style.display='none';
-                        this.parentElement.innerHTML='🛒';
-                        ">
+                <div class="product-info">
 
-                </div>
+                    <div class="product-name">
+                        ${item.name}
+                    </div>
 
-                <h3>
-                    ${product.name}
-                </h3>
+                    <div class="price">
+                        Rs. ${item.price}
+                    </div>
 
-                <div class="price">
-                    ${formatPrice(product.price)}
-                </div>
+                    <div class="qty">
 
-                <div class="quantity">
-
-                    <button
-                        class="qty-btn"
-                        onclick="
-                        changeQty(
-                            ${product.id},
-                            -1
-                        )">
-
+                        <button
+                        onclick="changeQty('${result.category}',${result.index},-1)">
                         −
+                        </button>
 
-                    </button>
+                        <span>
+                        ${quantity}
+                        </span>
 
-                    <span
-                        class="qty-number">
-
-                        ${qty}
-
-                    </span>
-
-                    <button
-                        class="qty-btn"
-                        onclick="
-                        changeQty(
-                            ${product.id},
-                            1
-                        )">
-
+                        <button
+                        onclick="changeQty('${result.category}',${result.index},1)">
                         +
+                        </button>
 
-                    </button>
+                    </div>
 
                 </div>
 
-                <button
-                    class="add-btn"
-                    onclick="
-                    addToCart(
-                        ${product.id}
-                    )">
+            </div>
 
-                    Add to Cart
+        `;
+    });
 
-                </button>
+    if(results.length===0){
 
-            `;
+        box.innerHTML =
+        '<div class="empty">کوئی سامان نہیں ملا</div>';
 
-
-            div.appendChild(card);
-
-        }
-    );
-
-
-    document.getElementById(
-        "noResult"
-    ).style.display =
-        found === 0
-        ? "block"
-        : "none";
-
+    }
 }
 
 
-/* =================================================
-   ADD TO CART
-================================================= */
-
-function addToCart(id){
-
-    if(!cart[id]){
-
-        cart[id] = 0;
-
-    }
-
-
-    cart[id]++;
-
-
-    renderProducts();
-
-    renderCart();
-
-}
-
-
-/* =================================================
-   PLUS MINUS
-================================================= */
-
-function changeQty(
-    id,
-    amount
-){
-
-    if(!cart[id]){
-
-        cart[id] = 0;
-
-    }
-
-
-    cart[id] += amount;
-
-
-    if(cart[id] <= 0){
-
-        delete cart[id];
-
-    }
-
-
-    renderProducts();
-
-    renderCart();
-
-}
-
-
-/* =================================================
-   RENDER CART
-================================================= */
-
-function renderCart(){
-
-    const div =
-        document.getElementById(
-            "cartItems"
-        );
-
-
-    div.innerHTML = "";
-
-
-    const ids =
-        Object.keys(cart);
-
-
-    if(ids.length === 0){
-
-        div.innerHTML =
-            `<div class="empty">
-                Cart is empty
-            </div>`;
-
-
-        document.getElementById(
-            "cartTotal"
-        ).textContent =
-            "Rs. 0";
-
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-
-    ids.forEach(
-        id => {
-
-            const product =
-                products.find(
-                    p => p.id == id
-                );
-
-
-            if(!product){
-                return;
-            }
-
-
-            const qty =
-                cart[id];
-
-
-            const itemTotal =
-                product.price * qty;
-
-
-            total += itemTotal;
-
-
-            const item =
-                document.createElement(
-                    "div"
-                );
-
-
-            item.className =
-                "cart-item";
-
-
-            item.innerHTML = `
-
-                <div class="cart-name">
-
-                    ${product.name}
-
-                    <br>
-
-                    <small>
-                        ${formatPrice(
-                            product.price
-                        )}
-                        × ${qty}
-                    </small>
-
-                </div>
-
-                <div class="cart-controls">
-
-                    <button
-                        class="small-btn"
-                        onclick="
-                        changeQty(
-                            ${product.id},
-                            -1
-                        )">
-
-                        −
-
-                    </button>
-
-                    <strong>
-                        ${qty}
-                    </strong>
-
-                    <button
-                        class="small-btn"
-                        onclick="
-                        changeQty(
-                            ${product.id},
-                            1
-                        )">
-
-                        +
-
-                    </button>
-
-                </div>
-
-                <strong>
-                    ${formatPrice(
-                        itemTotal
-                    )}
-                </strong>
-
-            `;
-
-
-            div.appendChild(item);
-
-        }
-    );
-
-
-    document.getElementById(
-        "cartTotal"
-    ).textContent =
-        formatPrice(total);
-
-}
-
-
-/* =================================================
-   WHATSAPP ORDER
-================================================= */
-
-function orderWhatsApp(){
-
-    const ids =
-        Object.keys(cart);
-
-
-    if(ids.length === 0){
-
-        alert(
-            "Please add saman to cart first."
-        );
-
-        return;
-
-    }
-
-
-    if(
-        !SHOP_WHATSAPP ||
-        SHOP_WHATSAPP.includes(
-            "123456"
-        )
-    ){
-
-        alert(
-            "HTML mein apna WhatsApp number likhein."
-        );
-
-        return;
-
-    }
-
-
-    const name =
-        document.getElementById(
-            "customerName"
-        ).value.trim();
-
-
-    const phone =
-        document.getElementById(
-            "customerPhone"
-        ).value.trim();
-
-
-    const address =
-        document.getElementById(
-            "customerAddress"
-        ).value.trim();
-
-
-    if(!name){
-
-        alert(
-            "Customer name likhein."
-        );
-
-        return;
-
-    }
-
-
-    if(!phone){
-
-        alert(
-            "Phone number likhein."
-        );
-
-        return;
-
-    }
-
-
-    if(!address){
-
-        alert(
-            "Customer address likhein."
-        );
-
-        return;
-
-    }
-
-
-    let message =
-        "🛒 B.S Insaf General Store Order\n\n";
-
-
-    message +=
-        "Customer Name: " +
-        name +
-        "\n";
-
-
-    message +=
-        "Phone: " +
-        phone +
-        "\n";
-
-
-    message +=
-        "Address: " +
-        address +
-        "\n\n";
-
-
-    message +=
-        "Order Details:\n";
-
-
-    let total = 0;
-
-
-    ids.forEach(
-        id => {
-
-            const product =
-                products.find(
-                    p => p.id == id
-                );
-
-
-            if(!product){
-                return;
-            }
-
-
-            const qty =
-                cart[id];
-
-
-            const itemTotal =
-                product.price * qty;
-
-
-            total += itemTotal;
-
-
-            message +=
-                product.name +
-                " × " +
-                qty +
-                " = " +
-                formatPrice(
-                    itemTotal
-                ) +
-                "\n";
-
-        }
-    );
-
-
-    message +=
-        "\nTOTAL = " +
-        formatPrice(total);
-
-
-    const url =
-        "https://wa.me/" +
-        SHOP_WHATSAPP +
-        "?text=" +
-        encodeURIComponent(
-            message
-        );
-
-
-    window.open(
-        url,
-        "_blank"
-    );
-
-}
-
-
-/* =================================================
-   CLEAR CART
-================================================= */
+/* Clear Cart */
 
 function clearCart(){
 
-    if(
-        Object.keys(cart).length === 0
-    ){
-        return;
-    }
+    cart={};
 
+    updateCart();
 
-    if(
-        confirm(
-            "Cart clear karna hai?"
-        )
-    ){
+    if(currentCategory){
 
-        cart = {};
-
-        renderProducts();
-
-        renderCart();
+        displayProducts(
+            PRODUCTS[currentCategory].items
+        );
 
     }
 
 }
 
 
-/* =================================================
-   START
-================================================= */
+/* WhatsApp Order */
 
-renderCategories();
+function sendWhatsApp(){
 
-renderProducts();
+    const keys=Object.keys(cart);
 
-renderCart();
+    if(keys.length===0){
+
+        alert("پہلے Cart میں سامان شامل کریں۔");
+
+        return;
+    }
+
+    const name =
+        document.getElementById("customerName").value;
+
+    const phone =
+        document.getElementById("customerPhone").value;
+
+    const address =
+        document.getElementById("customerAddress").value;
+
+    let message =
+        "🛒 B.S Insaf General Store%0A%0A";
+
+    message +=
+        "Customer Name: " + name + "%0A";
+
+    message +=
+        "Phone: " + phone + "%0A";
+
+    message +=
+        "Address: " + address + "%0A%0A";
+
+    message +=
+        "📦 Order:%0A";
+
+    let total=0;
+
+    keys.forEach(key=>{
+
+        const item=cart[key];
+
+        const subtotal =
+            item.price * item.quantity;
+
+        total += subtotal;
+
+        message +=
+            "• " +
+            item.name +
+            " × " +
+            item.quantity +
+            " = Rs. " +
+            subtotal +
+            "%0A";
+
+    });
+
+    message +=
+        "%0A💰 Total: Rs. " + total;
+
+    /*
+    ============================================
+    IMPORTANT:
+    نیچے 923XXXXXXXXX کی جگہ اپنا WhatsApp
+    نمبر لکھیں۔
+
+    مثال:
+    923111263960
+    ============================================
+    */
+
+    const shopWhatsApp =
+        "923111263960";
+
+    const url =
+        "https://wa.me/" +
+        shopWhatsApp +
+        "?text=" +
+        message;
+
+    window.open(url,"_blank");
+}
+
+
+/* Start */
+
+loadCategories();
+
+updateCart();
 
 </script>
 
